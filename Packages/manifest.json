@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "com.boxqkrtm.ide.cursor": "https://github.com/boxqkrtm/com.unity.ide.cursor.git",
     "com.myunitypackage.interactions": "https://github.com/AlexandreFlanquart/UnityPackage-Interactions.git",
     "com.myunitypackage.toolkit": "https://github.com/AlexandreFlanquart/UnityPackage-Toolkit.git",
     "com.unity.ai.navigation": "2.0.7",
+    "com.unity.cinemachine": "3.1.4",
     "com.unity.collab-proxy": "2.8.2",
     "com.unity.ide.rider": "3.0.36",
     "com.unity.ide.visualstudio": "2.0.23",
