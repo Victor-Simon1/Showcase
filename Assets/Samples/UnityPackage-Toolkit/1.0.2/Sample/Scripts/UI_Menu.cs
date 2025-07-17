@@ -12,19 +12,14 @@ namespace MyUnityPackage.Toolkit
         {
             UIManager.AddCanvasUI<UI_Menu>(gameObject);
             buttonPlay.onClick.AddListener(OnButtonPlayClick);
+
         }
 
         private void OnButtonPlayClick()
         {
             Debug.Log("OnButtonPlayClick");
-            UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu>().gameObject, "FadeInOut");
-            //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeIn");
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            
+            UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu>().gameObject, "FadeOut");
+            UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeIn");
         }
     }
 }
