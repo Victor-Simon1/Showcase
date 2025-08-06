@@ -1332,7 +1332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 27.99997}
+  m_AnchoredPosition: {x: 0, y: 28}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5437681750851984038
@@ -2070,8 +2070,8 @@ GameObject:
   - component: {fileID: 3565214233003655912}
   - component: {fileID: 8493253591371005419}
   - component: {fileID: 295900087865549606}
-  - component: {fileID: 8046121075249868167}
   - component: {fileID: 267918611256080205}
+  - component: {fileID: 7827373645568395968}
   m_Layer: 0
   m_Name: UI_Menu
   m_TagString: Untagged
@@ -2088,7 +2088,7 @@ RectTransform:
   m_GameObject: {fileID: 4496873090087114990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2252288639901808687}
@@ -2177,20 +2177,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8046121075249868167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4496873090087114990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee986793a832d174cb1ea1cc7717c267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasHelper: {fileID: 267918611256080205}
-  buttonPlay: {fileID: 2343517033874918351}
 --- !u!114 &267918611256080205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,6 +2190,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnStart: 0
+--- !u!114 &7827373645568395968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496873090087114990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0649026b6b91ba459c47ab2e9d29c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasHelper: {fileID: 267918611256080205}
+  buttonPlay: {fileID: 7264545387569158277}
 --- !u!1 &4503059637173403079
 GameObject:
   m_ObjectHideFlags: 0

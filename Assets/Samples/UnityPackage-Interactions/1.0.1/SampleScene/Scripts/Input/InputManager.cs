@@ -15,7 +15,7 @@ public class InputManager : MonoBehaviour
     public event Action<Vector2> OnLookDirection;
     public event Action OnPressInteract;
 
-    private PlayerControls playerControls;
+    private PlayerControls_ playerControls;
     private PlayerInput playerInput;
     private Vector2 movementInput = Vector2.zero;
     private Vector2 lookInput = Vector2.zero;
@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
     {
         Debug.Log("InputManager Start");
         playerInput = GetComponent<PlayerInput>();
-        playerControls = new PlayerControls();
+        playerControls = new PlayerControls_();
 
         playerControls.Player.Enable();
         playerControls.Player.Move.performed += MovementPerformed;

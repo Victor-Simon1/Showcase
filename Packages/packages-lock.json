@@ -16,7 +16,7 @@
       "dependencies": {
         "com.unity.cinemachine": "3.1.4"
       },
-      "hash": "45df8515fd4e79871c7ceeddc2cad40f49c800a7"
+      "hash": "f710bedefcc5afd7edd25de398e1a6622b4de86e"
     },
     "com.myunitypackage.interactions": {
       "version": "https://github.com/AlexandreFlanquart/UnityPackage-Interactions.git",
