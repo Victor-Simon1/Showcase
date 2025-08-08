@@ -16,8 +16,11 @@ public class UI_Menu : UI_Base
     private void OnButtonPlayClick()
     {
         Debug.Log("OnButtonPlayClick");
-        UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu_>().gameObject, "FadeOut");
-        UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeIn");
+
+        //BUG
+        //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu_>().gameObject, "FadeOut");
+        //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeIn");
+        
         UI_Manager.HideUI();
     }
 }
