@@ -16,4 +16,6 @@ MonoBehaviour:
   title: Welcome to the village
   description: Quest number 1
   steps:
+  - {fileID: 11400000, guid: 2bc81645943cad74c8b43242c99afdfd, type: 2}
   - {fileID: 11400000, guid: 35afcc53ded7fcb488bac961f5048575, type: 2}
+  - {fileID: 11400000, guid: 88a373d79d34fd040879817f1d169af5, type: 2}

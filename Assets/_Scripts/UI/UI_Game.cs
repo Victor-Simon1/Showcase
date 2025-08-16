@@ -1,24 +1,48 @@
 using UnityEngine;
 using UnityEngine.UI;
+using MyUnityPackage.Toolkit;
+using MyUnityPackage.ProgressionSystem;
+using TMPro;
 
-namespace MyUnityPackage.Toolkit
+namespace Showcase
 {
     public class UI_Game : MonoBehaviour
     {
         [SerializeField] private Button buttonBack;
+        QuestManager questManager;
 
+        [SerializeField] private GameObject dialogGO;
+        private PlayerInteract playerInteract;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            UIManager.AddCanvasUI<UI_Game>(gameObject);
-            buttonBack.onClick.AddListener(OnButtonBackClick);
+            ServiceLocator.AddService<UI_Game>(gameObject);
+            //questManager = QuestManager;
+            //UIManager.AddCanvasUI<UI_Game>(gameObject);
+            //buttonBack.onClick.AddListener(OnButtonBackClick);
+        }
+        //TODO Get Active Quest
+        void UpdateQuestPanel()
+        {
+
         }
 
-        private void OnButtonBackClick()
+        public void ShowDialog(PNJTalk pNJTalk)
+        {
+            dialogGO.SetActive(true);
+            dialogGO.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = pNJTalk.pnj.ToString();
+        }
+        public void HideDialog()
+        {
+            dialogGO.SetActive(false);
+        }
+        /*private void OnButtonBackClick()
         {
             Debug.Log("OnButtonBackClick");
             UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeOut");
             UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu>().gameObject, "FadeIn");
-        }
+        }*/
     }
 }
+
+

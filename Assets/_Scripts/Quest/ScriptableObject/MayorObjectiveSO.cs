@@ -1,11 +1,16 @@
 using UnityEngine;
 using MyUnityPackage.ProgressionSystem;
 
-[CreateAssetMenu(fileName = "MayorObjectiveSO", menuName = "ScriptableObjects/Quest/MayorObjectiveSO")]
-public class MayorObjectiveSO : ObjectiveDataSO
+
+namespace Showcase
 {
-    public override IQuestObjective CreateRuntimeObjective()
+    [CreateAssetMenu(fileName = "MayorObjectiveSO", menuName = "ScriptableObjects/Quest/MayorObjectiveSO")]
+    public class MayorObjectiveSO : ObjectiveDataSO
     {
-         return new MayorObjectObjective();
+        public override IQuestObjective CreateRuntimeObjective()
+        {
+            return new MayorObjectObjective("Get the object","The mayor has lost an object in the village, find him and return him to the mayor !",1);
+        }
     }
 }
+

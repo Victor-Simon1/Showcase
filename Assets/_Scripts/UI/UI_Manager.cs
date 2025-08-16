@@ -5,55 +5,60 @@ using MyUnityPackage.Toolkit;
 
 using PlayerInputManager = MyUnityPackage.Controller.PlayerInputManager;
 using Logger = MyUnityPackage.Toolkit.Logger;
-public class UI_Manager : MonoBehaviour, PlayerControls.IUIActions
+namespace Showcase
 {
-    [SerializeField] private CanvasHelper UIMenuCanvasHelper;
-    [SerializeField] private PlayerMovementInput PlayerMovementInput;
+    public class UI_Manager : MonoBehaviour, PlayerControls.IUIActions
+    {
+        [SerializeField] private CanvasHelper UIMenuCanvasHelper;
+        [SerializeField] private CanvasHelper UIGameCanvasHelper;
+        [SerializeField] private PlayerMovementInput PlayerMovementInput;
 
-    public static UI_Manager Instance { get; private set;}
-
-    void Awake()
-    {
-        if(Instance != null)
-            Logger.LogMessageWarningEditor("UIManager already exist");
-        Instance = this;
-    }
-    void OnEnable()
-    {
-        PlayerInputManager.Instance.PlayerControls.UI.Enable();
-        PlayerInputManager.Instance.PlayerControls.UI.SetCallbacks(this);
-    }
-    void OnDiable()
-    {
-        PlayerInputManager.Instance.PlayerControls.UI.Disable();
-        PlayerInputManager.Instance.PlayerControls.UI.RemoveCallbacks(this);
-    }
-    public void OnShow(InputAction.CallbackContext context)
-    {
-        if(!context.performed)
-            return;
-        Logger.LogMessage("OnShow");
-        if(!UIMenuCanvasHelper.Canvas.enabled)
+        void Awake()
         {
-            ShowUI();
+            ServiceLocator.AddService<UI_Manager>(gameObject);
         }
-        else
+        void OnEnable()
         {
-            HideUI();
+            PlayerInputManager.Instance.PlayerControls.UI.Enable();
+            PlayerInputManager.Instance.PlayerControls.UI.SetCallbacks(this);
         }
-            
-    }
-    public static void ShowUI()
-    {
-        Logger.LogMessage("ShowUI");
-        Instance.UIMenuCanvasHelper.Show();
-        Instance.PlayerMovementInput.enabled = false;
-    }
+        void OnDiable()
+        {
+            PlayerInputManager.Instance.PlayerControls.UI.Disable();
+            PlayerInputManager.Instance.PlayerControls.UI.RemoveCallbacks(this);
+        }
+        public void OnShow(InputAction.CallbackContext context)
+        {
+            if(!context.performed)
+                return;
+            Logger.LogMessage("OnShow");
+            if(!UIMenuCanvasHelper.Canvas.enabled)
+            {
+                ShowUI();
+            }
+            else
+            {
+                HideUI();
+            }
+                
+        }
+        public void ShowUI()
+        {
+            Logger.LogMessage("ShowUI");
+            UIMenuCanvasHelper.Show();
+            UIGameCanvasHelper.Hide();
+            //Replace with function cut all move/interaction
+            PlayerMovementInput.enabled = false;
+        }
 
-    public static void HideUI()
-    {
-        Logger.LogMessage("HideUI");
-        Instance.UIMenuCanvasHelper.Hide();
-        Instance.PlayerMovementInput.enabled = true;
+        public void HideUI()
+        {
+            Logger.LogMessage("HideUI");
+            UIGameCanvasHelper.Show();
+            UIMenuCanvasHelper.Hide();
+            //Replace with function cut all move/interaction
+            PlayerMovementInput.enabled = true;
+        }
     }
 }
+

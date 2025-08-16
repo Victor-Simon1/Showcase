@@ -7,6 +7,7 @@ namespace Showcase
     {
         private void Awake()
         {
+            ServiceLocator.AddService<GameManager>(gameObject);
             SetupGame();
         }
 

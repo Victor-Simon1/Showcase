@@ -2,43 +2,50 @@ using System;
 using MyUnityPackage.ProgressionSystem;
 using UnityEngine;
 
-public class MayorObjectObjective : IQuestObjective
+
+namespace Showcase
 {
-    public string Title => throw new NotImplementedException();
-
-    public string Description => throw new NotImplementedException();
-
-    public bool IsCompleted => throw new NotImplementedException();
-
-    public int CurrentProgression => throw new NotImplementedException();
-
-    public int MaxProgression => throw new NotImplementedException();
-
-    public event Action<int, int> OnProgress;
-    public event Action OnCompleted;
-
-    public bool CheckProgress()
+    public class MayorObjectObjective : IQuestObjective
     {
-        throw new NotImplementedException();
-    }
+        public string Title {get;set;}
+        public string Description {get;set;}
+        public bool IsCompleted {get;set;}
+        public int CurrentProgression {get;set;}
+        public int MaxProgression {get;set;}
+        public event Action<int, int> OnProgress;
+        public event Action OnCompleted;
 
-    public bool IsComplete()
-    {
-        throw new NotImplementedException();
-    }
+        public MayorObjectObjective(string _title, string _description, int _countRequired)
+        {
+            Title = _title;
+            Description = _description;
+            CurrentProgression = 0;
+            MaxProgression = _countRequired;
+        }
+        public void Start()
+        {
 
-    public void OnProgressChange()
-    {
-        throw new NotImplementedException();
-    }
+        }
+        public void Stop()
+        {
+            throw new NotImplementedException();
+        }
+        
+        public bool CheckProgress()
+        {
+            throw new NotImplementedException();
+        }
 
-    public void Stop()
-    {
-        throw new NotImplementedException();
-    }
-    public void Start()
-    {
+        public bool IsComplete()
+        {
+            throw new NotImplementedException();
+        }
 
+        public void OnProgressChange()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
+
 

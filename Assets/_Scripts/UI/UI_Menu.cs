@@ -2,25 +2,30 @@ using UnityEngine;
 using MyUnityPackage.Toolkit;
 using UnityEngine.UI;
 
-public class UI_Menu : UI_Base
+namespace Showcase
 {
-    [SerializeField] private Button buttonPlay;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class UI_Menu : UI_Base
     {
-        UIManager.AddCanvasUI<UI_Menu_>(gameObject);
-        buttonPlay.onClick.AddListener(OnButtonPlayClick);
+        [SerializeField] private Button buttonPlay;
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
+        {
+            ServiceLocator.AddService<UI_Menu>(gameObject);
 
-    }
+            UIManager.AddCanvasUI<UI_Menu>(gameObject);
+            buttonPlay.onClick.AddListener(OnButtonPlayClick);
+        }
 
-    private void OnButtonPlayClick()
-    {
-        Debug.Log("OnButtonPlayClick");
+        private void OnButtonPlayClick()
+        {
+            Debug.Log("OnButtonPlayClick");
 
-        //BUG
-        //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu_>().gameObject, "FadeOut");
-        //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeIn");
-        
-        UI_Manager.HideUI();
+            //BUG
+            //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu_>().gameObject, "FadeOut");
+            //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeIn");
+            
+            ServiceLocator.GetService<UI_Manager>().HideUI();
+        }
     }
 }
+
