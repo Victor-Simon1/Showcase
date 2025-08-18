@@ -16,17 +16,39 @@ MonoBehaviour:
     UserAgreesToHaveItOnTheScene: 0
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
-    mTerms: []
+    mTerms:
+    - Term: UI/PlayButton
+      TermType: 0
+      Description: test desc
+      Languages:
+      - Play
+      - Jouer
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/TitleMenu
+      TermType: 0
+      Description: 
+      Languages:
+      - Showcase
+      - Showcase
+      Flags: 0000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
-    mLanguages: []
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: French
+      Code: fr
+      Flags: 0
     IgnoreDeviceLanguage: 0
     _AllowUnloadingLanguages: 0
-    Google_WebServiceURL: 
-    Google_SpreadsheetKey: 
-    Google_SpreadsheetName: 
-    Google_LastUpdatedVersion: 
+    Google_WebServiceURL: https://script.google.com/macros/s/AKfycbw3KDQwAB2jgQrwXKgoZabdukdXdf_Qngz0a4mOODA9YU8Q6U3tySwXuHYGvLtie1XCOw/exec
+    Google_SpreadsheetKey: 1z8sjjeMoILnGn8EYefK0S-l_0uQUh6i9sn_RCBH1--A
+    Google_SpreadsheetName: I2Loc Showcase Localization
+    Google_LastUpdatedVersion: 1755523318451
     Google_Password: change_this
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2
