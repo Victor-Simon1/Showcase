@@ -11,6 +11,7 @@ namespace Showcase
     {
         [SerializeField] private CanvasHelper UIMenuCanvasHelper;
         [SerializeField] private CanvasHelper UIGameCanvasHelper;
+        [SerializeField] private CanvasHelper UISettingsCanvasHelper;
         [SerializeField] private PlayerMovementInput PlayerMovementInput;
 
         void Awake()
@@ -42,10 +43,16 @@ namespace Showcase
             }
                 
         }
+
+        public void StartUI()
+        {
+            UIGameCanvasHelper.Show();
+            UIMenuCanvasHelper.Hide();
+        }
         public void ShowUI()
         {
             Logger.LogMessage("ShowUI");
-            UIMenuCanvasHelper.Show();
+            UISettingsCanvasHelper.Show();
             UIGameCanvasHelper.Hide();
             //Replace with function cut all move/interaction
             PlayerMovementInput.enabled = false;
@@ -55,7 +62,7 @@ namespace Showcase
         {
             Logger.LogMessage("HideUI");
             UIGameCanvasHelper.Show();
-            UIMenuCanvasHelper.Hide();
+            UISettingsCanvasHelper.Hide();
             //Replace with function cut all move/interaction
             PlayerMovementInput.enabled = true;
         }

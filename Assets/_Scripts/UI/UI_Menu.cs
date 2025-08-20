@@ -1,30 +1,27 @@
 using UnityEngine;
 using MyUnityPackage.Toolkit;
-using UnityEngine.UI;
+using UnityEngine.Splines;
+using UnityEngine.Playables;
 
 namespace Showcase
 {
     public class UI_Menu : UI_Base
     {
-        [SerializeField] private Button buttonPlay;
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+        [SerializeField] SplineAnimate splineAnimate;
+        [SerializeField] PlayableDirector timelineEntrance;
         void Start()
         {
             ServiceLocator.AddService<UI_Menu>(gameObject);
-
             UIManager.AddCanvasUI<UI_Menu>(gameObject);
-            buttonPlay.onClick.AddListener(OnButtonPlayClick);
         }
 
-        private void OnButtonPlayClick()
+        public void StartGame()
         {
-            Debug.Log("OnButtonPlayClick");
-
-            //BUG
-            //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu_>().gameObject, "FadeOut");
-            //UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeIn");
-            
-            ServiceLocator.GetService<UI_Manager>().HideUI();
+            ServiceLocator.GetService<UI_Manager>().StartUI();
+            timelineEntrance.Play();
+            splineAnimate.Play();
+           
         }
     }
 }

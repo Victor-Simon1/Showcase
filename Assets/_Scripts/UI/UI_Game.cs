@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using MyUnityPackage.Toolkit;
 using MyUnityPackage.ProgressionSystem;
 using TMPro;
+using MyUnityPackage.Interactions;
 
 namespace Showcase
 {
@@ -27,7 +28,7 @@ namespace Showcase
 
         }
 
-        public void ShowDialog(PNJTalk pNJTalk)
+        public void ShowDialog(KeyboardVillagerInteraction pNJTalk)
         {
             dialogGO.SetActive(true);
             dialogGO.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = pNJTalk.pnj.ToString();

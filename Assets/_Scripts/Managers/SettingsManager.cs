@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using I2.Loc;
 using MyUnityPackage.Toolkit;
 using TMPro;
 using UnityEngine;
@@ -40,6 +41,12 @@ namespace Showcase
             Logger.LogMessage("" + qualityIndex);
             QualitySettings.SetQualityLevel(qualityIndex,true);
         }
+        public void ChangeLangage(int langIndex)
+        {
+            Logger.LogMessage("" + langIndex);
+            //LocalizationManager.CurrentLanguage = langIndex;
+        }
+
 
         public void ChangeResolution(int resolutionIndex)
         {

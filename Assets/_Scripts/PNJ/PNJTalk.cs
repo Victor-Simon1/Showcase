@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using MyUnityPackage.Toolkit;
+using MyUnityPackage.Controller;
 namespace Showcase
 {
     public enum PNJ
@@ -26,7 +27,9 @@ namespace Showcase
 
         public void Interact(Transform interactor)
         {
-            ServiceLocator.GetService<UI_Game>().ShowDialog(this);
+           // ServiceLocator.GetService<UI_Game>().ShowDialog(this);
+            ServiceLocator.GetService<PlayerController>().enabled = false;
+            ServiceLocator.GetService<PlayerController>().gameObject.GetComponent<PlayerAnimation>().enabled = false;
         }
     }
 }

@@ -17,12 +17,60 @@ MonoBehaviour:
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
     mTerms:
-    - Term: UI/PlayButton
+    - Term: UI/Button/Play
       TermType: 0
       Description: test desc
       Languages:
-      - Play
       - Jouer
+      - Play
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Button/Quest
+      TermType: 0
+      Description: 
+      Languages:
+      - Quetes
+      - Quests
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Button/Settings
+      TermType: 0
+      Description: 
+      Languages:
+      - Parametres
+      - Settings
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Button/Audio
+      TermType: 0
+      Description: 
+      Languages:
+      - Sons
+      - Audio
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Button/Quit
+      TermType: 0
+      Description: 
+      Languages:
+      - Quittez
+      - Quit
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Button/Resume
+      TermType: 0
+      Description: 
+      Languages:
+      - Retour
+      - Resume
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
       Flags: 0000
       Languages_Touch: []
     - Term: UI/TitleMenu
@@ -33,22 +81,38 @@ MonoBehaviour:
       - Showcase
       Flags: 0000
       Languages_Touch: []
+    - Term: UI/Pause
+      TermType: 0
+      Description: 
+      Languages:
+      - Pause
+      - Pause
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/MainMenu
+      TermType: 0
+      Description: 
+      Languages:
+      - Menu Principale
+      - Main Menu
+      Flags: 0000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
     mLanguages:
-    - Name: English
-      Code: en
-      Flags: 0
     - Name: French
       Code: fr
       Flags: 0
-    IgnoreDeviceLanguage: 0
+    - Name: English
+      Code: en
+      Flags: 0
+    IgnoreDeviceLanguage: 1
     _AllowUnloadingLanguages: 0
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbw3KDQwAB2jgQrwXKgoZabdukdXdf_Qngz0a4mOODA9YU8Q6U3tySwXuHYGvLtie1XCOw/exec
     Google_SpreadsheetKey: 1z8sjjeMoILnGn8EYefK0S-l_0uQUh6i9sn_RCBH1--A
     Google_SpreadsheetName: I2Loc Showcase Localization
-    Google_LastUpdatedVersion: 1755523318451
+    Google_LastUpdatedVersion: 1755608393462
     Google_Password: change_this
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

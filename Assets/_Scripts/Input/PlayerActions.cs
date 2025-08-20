@@ -1,4 +1,6 @@
+using System;
 using MyUnityPackage.Controller;
+using MyUnityPackage.Toolkit;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Logger =  MyUnityPackage.Toolkit.Logger;
@@ -13,9 +15,10 @@ namespace Showcase
 
         PlayerInteract playerInteract;
 
-
+        public event Action OnPressInteract;
         void Awake()
         {
+            ServiceLocator.AddService<PlayerActions>(gameObject);
             playerInteract = GetComponent<PlayerInteract>();   
         }
         void OnEnable()
@@ -49,7 +52,8 @@ namespace Showcase
             if(!context.performed)
                 return;
             Logger.LogMessage("Interact press");
-            playerInteract.Interact();
+            OnPressInteract.Invoke();
+            //playerInteract.Interact();
         }
 
         public void OnNewaction(InputAction.CallbackContext context)
