@@ -26,6 +26,10 @@ namespace Showcase
         {
             MyUnityPackage.Toolkit.Logger.LogMessageEditor("START LIGH OBJECTIF! ");
             InteractableLight.OnLightOn += OnProgressChange;
+
+            InteractableLight[] lightArray = GameObject.FindObjectsOfType<InteractableLight>();
+            foreach (InteractableLight light in lightArray)
+                light.Enable();
         }
         public void Stop()
         {

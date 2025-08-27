@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850bf896a88936d41bf6779a8c274a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationType: 0
+  activationType: 1
   delay: 0
   once: 0
   interactionTrigger: {fileID: 1277980822567038062}
