@@ -13,7 +13,7 @@ namespace Showcase
         QuestManager questManager;
 
         [SerializeField] private GameObject dialogGO;
-        private PlayerInteract playerInteract;
+       
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -28,7 +28,7 @@ namespace Showcase
 
         }
 
-        public void ShowDialog(KeyboardVillagerInteraction pNJTalk)
+        public void ShowDialog(InteractableVillager pNJTalk)
         {
             dialogGO.SetActive(true);
             dialogGO.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = pNJTalk.pnj.ToString();

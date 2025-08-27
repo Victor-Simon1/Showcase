@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Showcase
 {
-    public class MayorObjectObjective : IQuestObjective
+    public class MayorLightOnObjective : IQuestObjective
     {
         public string Title {get;set;}
         public string Description {get;set;}
@@ -15,7 +15,7 @@ namespace Showcase
         public event Action<int, int> OnProgress;
         public event Action OnCompleted;
 
-        public MayorObjectObjective(string _title, string _description, int _countRequired)
+        public MayorLightOnObjective(string _title, string _description, int _countRequired)
         {
             Title = _title;
             Description = _description;
@@ -24,7 +24,8 @@ namespace Showcase
         }
         public void Start()
         {
-
+            MyUnityPackage.Toolkit.Logger.LogMessageEditor("START LIGH OBJECTIF! ");
+            InteractableLight.OnLightOn += OnProgressChange;
         }
         public void Stop()
         {
@@ -33,17 +34,24 @@ namespace Showcase
         
         public bool CheckProgress()
         {
-            throw new NotImplementedException();
+              return IsCompleted = CurrentProgression >= MaxProgression;
         }
 
         public bool IsComplete()
         {
-            throw new NotImplementedException();
+           return IsCompleted;
         }
 
         public void OnProgressChange()
         {
-            throw new NotImplementedException();
+           CurrentProgression++;
+           OnProgress?.Invoke(CurrentProgression, MaxProgression);
+
+            if (CheckProgress())
+            {
+                MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'allumer des lampes! ");
+                OnCompleted?.Invoke();
+            }
         }
     }
 }

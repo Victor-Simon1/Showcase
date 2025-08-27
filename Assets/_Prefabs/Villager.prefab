@@ -1152,7 +1152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7904249453301187637}
-  - component: {fileID: 5562112484646582560}
+  - component: {fileID: 1968428947868980660}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -1175,7 +1175,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7075376421076385297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5562112484646582560
+--- !u!114 &1968428947868980660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3091434796424578342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15dddd017d025334e9cc6c1f895d90d5, type: 3}
+  m_Script: {fileID: 11500000, guid: a0f3e81063508f24998ec7f4779924a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3151121707635389482
@@ -1776,7 +1776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7075376421076385297}
-  - component: {fileID: 1362518323326424742}
+  - component: {fileID: 480048778888446850}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Untagged
@@ -1792,7 +1792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4624213678012866036}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 72.61, y: 0.712, z: 41.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1804,7 +1804,7 @@ Transform:
   - {fileID: 449756238303067395}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1362518323326424742
+--- !u!114 &480048778888446850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1813,22 +1813,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4624213678012866036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fbff9525f305c47aaeca44a6d32ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: 218ac34d9d2221548ae733d56a1e617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activationType: 0
   delay: 0
   once: 0
-  interactionTrigger: {fileID: 5562112484646582560}
-  effects:
-  - {fileID: 6120313215171532117}
-  - {fileID: 7447288937963124689}
+  interactionTrigger: {fileID: 0}
+  effects: []
   conditions:
   - {fileID: 5141909557706648102}
-  animatedObj: {fileID: 2389652042389692055}
-  enableText: {fileID: 8049310811446587273}
-  requiredConditionsText: {fileID: 7375924884337183783}
-  allConditionsText: {fileID: 1469051795097260031}
+  pnj: 0
 --- !u!1 &4763720427241499457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,7 +2822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeCheckerRegisterType: 0
   center: {fileID: 7075376421076385297}
-  maxDistance: 10
+  maxDistance: 2.2
 --- !u!114 &5141909557706648102
 MonoBehaviour:
   m_ObjectHideFlags: 0

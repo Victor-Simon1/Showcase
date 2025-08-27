@@ -1,11 +1,11 @@
 using MyUnityPackage.ProgressionSystem;
+using MyUnityPackage.Toolkit;
 using System;
 
 namespace Showcase
 {
     public class TalkMayorObjective : IQuestObjective
     {
-    
         public string Title {get;set;}
 
         public string Description {get;set;}
@@ -27,7 +27,18 @@ namespace Showcase
             CurrentProgression = 0;
             MaxProgression = _countRequired;
         }
-
+        public void Start()
+        {
+            MyUnityPackage.Toolkit.Logger.LogMessageEditor("START TALK OBJECTIF! ");
+             
+           //if(InteractableVillager.OnTalkPnjIsNull())
+            InteractableVillager.OnTalkPNJ += OnProgressChangePNJ;
+        }
+        public void Stop()
+        {
+            throw new NotImplementedException();
+        }
+        
 
         public bool CheckProgress()
         {
@@ -40,11 +51,13 @@ namespace Showcase
         }
         public void OnProgressChange()
         {
+            Logger.LogMessageEditor("OnProggressChange de la mission de parler au maire ! ");
             CurrentProgression++;
             OnProgress?.Invoke(CurrentProgression, MaxProgression);
 
             if (CheckProgress())
             {
+                Logger.LogMessageEditor("Completion de la mission de parler au maire ! ");
                 OnCompleted?.Invoke();
             }
         }
@@ -52,18 +65,11 @@ namespace Showcase
         {
             if(IsCompleted || pnj != PNJ.Mayor)
                 return;
-
+            Logger.LogMessageEditor("PNJ ChANGE");
             OnProgressChange();
         
         }
 
-        public void Stop()
-        {
-            throw new NotImplementedException();
-        }
-        public void Start()
-        {
-            PNJTalk.TalkAction += OnProgressChangePNJ;
-        }
+      
     }
 }

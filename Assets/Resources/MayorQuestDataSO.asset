@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faacf68ffae54394c863f2426435aa83, type: 3}
   m_Name: MayorQuestDataSO
   m_EditorClassIdentifier: 
-  id: 1
+  id: Quest1
   title: Welcome to the village
   description: Quest number 1
   steps:

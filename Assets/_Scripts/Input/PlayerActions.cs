@@ -13,13 +13,12 @@ namespace Showcase
     public class PlayerActions : MonoBehaviour,PlayerControls.IPlayerActionsActions
     {
 
-        PlayerInteract playerInteract;
+
 
         public event Action OnPressInteract;
         void Awake()
         {
             ServiceLocator.AddService<PlayerActions>(gameObject);
-            playerInteract = GetComponent<PlayerInteract>();   
         }
         void OnEnable()
         {

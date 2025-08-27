@@ -8,13 +8,14 @@ using UnityEngine;
 
 namespace Showcase
 {
-    public class KeyboardVillagerInteraction : AInteractionTrigger
+    
+    public class InteractionTriggerKeyboard : AInteractionTrigger
     {
         public override event Action onEnter;
         public override event Action onExit;
         public override event Action onInteract;
 
-        public PNJ pnj;
+        
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -24,11 +25,8 @@ namespace Showcase
 
         void OnInteract()
         {
+            MyUnityPackage.Toolkit.Logger.LogMessageEditor("Press InteractionTrigger");
             onInteract?.Invoke();
-            MyUnityPackage.Toolkit.Logger.LogMessage("Interaction avec un villageois ! ");
-            ServiceLocator.GetService<UI_Game>().ShowDialog(this);
-            ServiceLocator.GetService<PlayerController>().enabled = false;
-            ServiceLocator.GetService<PlayerController>().gameObject.GetComponent<PlayerAnimation>().enabled = false;
         }
     }
 }

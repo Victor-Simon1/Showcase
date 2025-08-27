@@ -9,7 +9,7 @@ namespace Showcase
     {
         public override IQuestObjective CreateRuntimeObjective()
         {
-            return new MayorObjectObjective("Get the object","The mayor has lost an object in the village, find him and return him to the mayor !",1);
+            return new MayorLightOnObjective("Get the object","The mayor has lost an object in the village, find him and return him to the mayor !",GameObject.FindObjectsOfType<InteractableLight>().Length);
         }
     }
 }

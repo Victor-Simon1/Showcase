@@ -4,12 +4,9 @@ using MyUnityPackage.Toolkit;
 using MyUnityPackage.Controller;
 namespace Showcase
 {
-    public enum PNJ
-    {
-        Mayor,
-    }
+    
 
-    public class PNJTalk : MonoBehaviour,IInteractable
+    public class PNJTalk : MonoBehaviour
     {
         public PNJ pnj;
 
