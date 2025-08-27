@@ -30,9 +30,7 @@ namespace Showcase
         public void Start()
         {
             MyUnityPackage.Toolkit.Logger.LogMessageEditor("START WOOD OBJECTIF! ");
-            
-            
-
+            InteractableWood.OnWoodGet += OnProgressChange;
         }
 
         public void Stop()

@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6900446631304227000}
-  - component: {fileID: 6943202582973486683}
+  - component: {fileID: 3663717118276624013}
   m_Layer: 0
   m_Name: WoodPlank
   m_TagString: Untagged
@@ -347,7 +347,7 @@ Transform:
   - {fileID: 8632731688692890161}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6943202582973486683
+--- !u!114 &3663717118276624013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,22 +356,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2782534312772253934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fbff9525f305c47aaeca44a6d32ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: e2c92567300489a4b8dc94dd329c7bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationType: 0
-  delay: 0
-  once: 0
-  interactionTrigger: {fileID: 2261555848411159506}
-  effects:
-  - {fileID: 2904004172285773927}
-  - {fileID: 7511733580280354830}
-  conditions:
-  - {fileID: 8609508869023185399}
-  animatedObj: {fileID: 7198610144696681577}
-  enableText: {fileID: 1469174507806117891}
-  requiredConditionsText: {fileID: 2371293239395926285}
-  allConditionsText: {fileID: 7666479874540642837}
 --- !u!1 &3228617713775759293
 GameObject:
   m_ObjectHideFlags: 0
