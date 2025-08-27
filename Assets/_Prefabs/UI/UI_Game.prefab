@@ -937,7 +937,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4177892138556708391}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6898092afb9e0a941a228957a4222761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideOnStart: 0
+  hideOnStart: 1
 --- !u!114 &4602958160687399009
 MonoBehaviour:
   m_ObjectHideFlags: 0

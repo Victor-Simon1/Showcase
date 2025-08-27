@@ -9,7 +9,7 @@ namespace Showcase
     {
         public override IQuestObjective CreateRuntimeObjective()
         {
-            return new WoodObjective();
+            return new WoodObjective("Get Wood" , "Get Wood", 5);
         }
     }
 }

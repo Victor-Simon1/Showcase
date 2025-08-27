@@ -713,6 +713,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2323434758620630647}
     m_Modifications:
+    - target: {fileID: 2734130735279783606, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
+      propertyPath: mTerm
+      value: UI/Button/Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 3951892693731974048, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
       propertyPath: m_text
       value: Quit
@@ -819,6 +823,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2323434758620630647}
     m_Modifications:
+    - target: {fileID: 2734130735279783606, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
+      propertyPath: mTerm
+      value: UI/Button/Audio
+      objectReference: {fileID: 0}
     - target: {fileID: 3951892693731974048, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
       propertyPath: m_text
       value: Audio
@@ -953,6 +961,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2323434758620630647}
     m_Modifications:
+    - target: {fileID: 2734130735279783606, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
+      propertyPath: mTerm
+      value: UI/Button/Settings
+      objectReference: {fileID: 0}
     - target: {fileID: 3951892693731974048, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
       propertyPath: m_text
       value: Settings
@@ -1228,6 +1240,10 @@ PrefabInstance:
     - target: {fileID: 2734130735279783606, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
       propertyPath: mTerm
       value: UI/Button/Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734130735279783606, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
+      propertyPath: mGUI_ShowReferences
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3951892693731974048, guid: 07a44fefec151244ab65887ae7d8b36f, type: 3}
       propertyPath: m_text

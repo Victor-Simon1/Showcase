@@ -6,46 +6,60 @@ namespace Showcase
 {
     public class WoodObjective : IQuestObjective
     {
-        public string Title => throw new NotImplementedException();
+        public string Title {get; set;}
 
-        public string Description => throw new NotImplementedException();
+        public string Description {get; set;}
 
-        public bool IsCompleted => throw new NotImplementedException();
+        public bool IsCompleted {get; set;}
 
-        public int CurrentProgression => throw new NotImplementedException();
+        public int CurrentProgression{get; set;}
 
-        public int MaxProgression => throw new NotImplementedException();
+        public int MaxProgression {get; set;}
 
         public event Action<int, int> OnProgress;
         public event Action OnCompleted;
 
-        public WoodObjective()
+        public WoodObjective(string _title, string _description,int _MaxProgression)
         {
-            
-        }
-        public bool CheckProgress()
-        {
-            throw new NotImplementedException();
-        }
+            Title = _title;
+            Description = _description;
+            MaxProgression = _MaxProgression;
 
-        public bool IsComplete()
-        {
-            throw new NotImplementedException();
         }
-
-        public void OnProgressChange()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public void Start()
         {
-            throw new NotImplementedException();
+            MyUnityPackage.Toolkit.Logger.LogMessageEditor("START WOOD OBJECTIF! ");
+            
+            
+
         }
 
         public void Stop()
         {
             throw new NotImplementedException();
         }
+        public bool CheckProgress()
+        {
+            return IsCompleted = CurrentProgression >= MaxProgression;
+        }
+
+        public bool IsComplete()
+        {
+            return IsCompleted;
+        }
+
+        public void OnProgressChange()
+        {
+            CurrentProgression++;
+            OnProgress?.Invoke(CurrentProgression, MaxProgression);
+
+            if (CheckProgress())
+            {
+                MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
+                OnCompleted?.Invoke();
+            }
+        }
+
     }
 }
