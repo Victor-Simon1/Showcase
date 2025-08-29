@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6789233372962110795}
-  - component: {fileID: 3750726478439890928}
+  - component: {fileID: 8787255061099110863}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -77,7 +77,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8391356325253968762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3750726478439890928
+--- !u!114 &8787255061099110863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2270350517778111302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15dddd017d025334e9cc6c1f895d90d5, type: 3}
+  m_Script: {fileID: 11500000, guid: a0f3e81063508f24998ec7f4779924a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2784027273558173302
@@ -1051,7 +1051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8391356325253968762}
-  - component: {fileID: 8931026795923120035}
+  - component: {fileID: 2965928808300054812}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -1079,7 +1079,7 @@ Transform:
   - {fileID: 6630337366743416308}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8931026795923120035
+--- !u!114 &2965928808300054812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1088,22 +1088,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7253382559037345575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fbff9525f305c47aaeca44a6d32ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9eaeb60e027ddbb47a5d57aec223920f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activationType: 0
   delay: 0
   once: 0
-  interactionTrigger: {fileID: 3750726478439890928}
-  effects:
-  - {fileID: 8194600831712937158}
-  - {fileID: 8721554316265405638}
+  interactionTrigger: {fileID: 8787255061099110863}
+  effects: []
   conditions:
   - {fileID: 6371242602797067681}
-  animatedObj: {fileID: 3030375680734437199}
-  enableText: {fileID: 8924419195507175327}
-  requiredConditionsText: {fileID: 903018846360593887}
-  allConditionsText: {fileID: 7871407236394705059}
 --- !u!1 &8287234232619459730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeCheckerRegisterType: 0
   center: {fileID: 8391356325253968762}
-  maxDistance: 10
+  maxDistance: 3
 --- !u!114 &6371242602797067681
 MonoBehaviour:
   m_ObjectHideFlags: 0

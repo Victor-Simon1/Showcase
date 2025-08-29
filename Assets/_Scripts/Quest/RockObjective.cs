@@ -1,10 +1,10 @@
+using UnityEngine;
 using System;
 using MyUnityPackage.ProgressionSystem;
-using UnityEngine;
 
 namespace Showcase
 {
-    public class WoodObjective : IQuestObjective
+    public class RockObjective : IQuestObjective
     {
         public string Title {get; set;}
 
@@ -19,7 +19,7 @@ namespace Showcase
         public event Action<int, int> OnProgress;
         public event Action OnCompleted;
 
-        public WoodObjective(string _title, string _description,int _MaxProgression)
+        public RockObjective(string _title, string _description,int _MaxProgression)
         {
             Title = _title;
             Description = _description;
@@ -30,12 +30,12 @@ namespace Showcase
         public void Start()
         {
             MyUnityPackage.Toolkit.Logger.LogMessageEditor("START WOOD OBJECTIF! ");
-            InteractableWood.OnWoodGet += OnProgressChange;
+            InteractableRock.OnRockGet += OnProgressChange;
         }
 
         public void Stop()
         {
-             InteractableWood.OnWoodGet -= OnProgressChange;
+            InteractableRock.OnRockGet -= OnProgressChange;
         }
         public bool CheckProgress()
         {
@@ -51,7 +51,7 @@ namespace Showcase
         {
             CurrentProgression++;
             OnProgress?.Invoke(CurrentProgression, MaxProgression);
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("WOOD On ProgrssChange");
+
             if (CheckProgress())
             {
                 MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
@@ -61,3 +61,4 @@ namespace Showcase
 
     }
 }
+

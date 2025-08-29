@@ -3,9 +3,9 @@ using UnityEngine;
 using System;
 namespace Showcase
 {
-    public class InteractableWood : AInteractable
+    public class InteractableRock : AInteractable
     {
-        public static event Action OnWoodGet;
+        public static event Action OnRockGet;
         protected override void Init()
         {
             onInteractAction += InteractWood;
@@ -13,8 +13,7 @@ namespace Showcase
 
         void InteractWood()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("Get Wood");
-            OnWoodGet?.Invoke();
+            OnRockGet?.Invoke();
             EndInteraction();
         }
     }

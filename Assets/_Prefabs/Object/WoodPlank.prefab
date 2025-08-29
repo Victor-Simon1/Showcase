@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1436202809447613779}
-  - component: {fileID: 2261555848411159506}
+  - component: {fileID: 196281545644507436}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6900446631304227000}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2261555848411159506
+--- !u!114 &196281545644507436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 32266048049739108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15dddd017d025334e9cc6c1f895d90d5, type: 3}
+  m_Script: {fileID: 11500000, guid: a0f3e81063508f24998ec7f4779924a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &704092291246088820
@@ -359,6 +359,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c92567300489a4b8dc94dd329c7bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activationType: 0
+  delay: 0
+  once: 1
+  interactionTrigger: {fileID: 196281545644507436}
+  effects: []
+  conditions: []
 --- !u!1 &3228617713775759293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangeCheckerRegisterType: 0
   center: {fileID: 6900446631304227000}
-  maxDistance: 10
+  maxDistance: 3
 --- !u!114 &8609508869023185399
 MonoBehaviour:
   m_ObjectHideFlags: 0
