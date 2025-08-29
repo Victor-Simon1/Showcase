@@ -30,7 +30,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "4c7bba1fbb9638dcfc5a7925ca6c7c741baae8b4"
+      "hash": "f1a74310a1d97ae0dc7d7b79651302c33bfcee2d"
     },
     "com.myunitypackage.toolkit": {
       "version": "https://github.com/AlexandreFlanquart/UnityPackage-Toolkit.git",
