@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2712a8b3a75e784f83d2776b8a0ad43, type: 3}
   m_Name: RockObjectiveSO
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Rock Objective
+  description: Rock Objective

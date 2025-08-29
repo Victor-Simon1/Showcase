@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RockStep
   m_EditorClassIdentifier: 
   objectives:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: edd01abfc7343ad4a954734cfd919a74, type: 2}

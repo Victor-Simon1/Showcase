@@ -16,4 +16,4 @@ MonoBehaviour:
   title: Help the blacksmith
   description: BLACKSMITH
   steps:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2ac7aca8b7f2b0e4f8c1380dc45db91c, type: 2}
