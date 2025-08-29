@@ -32130,6 +32130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7d35a40efac8f49830f6deae50fccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questManager: {fileID: 1214016782}
 --- !u!1001 &2061871014
 PrefabInstance:
   m_ObjectHideFlags: 0

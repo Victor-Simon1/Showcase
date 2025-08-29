@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MayorSecondTalkQuestStepDataSO
   m_EditorClassIdentifier: 
   objectives:
-  - {fileID: 11400000, guid: 814916c9fe6611341b9f27f669b42831, type: 2}
+  - {fileID: 11400000, guid: 3f8c1b041c13989469f7d7d129ee616a, type: 2}

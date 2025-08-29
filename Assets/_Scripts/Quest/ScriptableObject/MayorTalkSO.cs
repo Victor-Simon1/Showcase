@@ -9,7 +9,7 @@ namespace Showcase
      {
           public override IQuestObjective CreateRuntimeObjective()
           {
-               return new TalkMayorObjective("Talk to the Mayor","The Mayor greets you !",1);
+               return new VillagerTalkObjective("Talk to the Mayor","The Mayor greets you !",1);
           }
      }
 }

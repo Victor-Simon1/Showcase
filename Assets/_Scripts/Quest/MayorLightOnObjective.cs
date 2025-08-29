@@ -33,7 +33,7 @@ namespace Showcase
         }
         public void Stop()
         {
-            throw new NotImplementedException();
+            InteractableLight.OnLightOn -= OnProgressChange;
         }
         
         public bool CheckProgress()

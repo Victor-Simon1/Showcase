@@ -4,7 +4,7 @@ using System;
 
 namespace Showcase
 {
-    public class TalkMayorObjective : IQuestObjective
+    public class VillagerTalkObjective : IQuestObjective
     {
         public string Title {get;set;}
 
@@ -20,7 +20,7 @@ namespace Showcase
         public event Action OnCompleted;
 
 
-        public TalkMayorObjective(string _title, string _description, int _countRequired)
+        public VillagerTalkObjective(string _title, string _description, int _countRequired)
         {
             Title = _title;
             Description = _description;
@@ -36,7 +36,7 @@ namespace Showcase
         }
         public void Stop()
         {
-            throw new NotImplementedException();
+            InteractableVillager.OnTalkPNJ -= OnProgressChangePNJ;
         }
         
 
@@ -65,7 +65,6 @@ namespace Showcase
         {
             if(IsCompleted || pnj != PNJ.Mayor)
                 return;
-            Logger.LogMessageEditor("PNJ ChANGE");
             OnProgressChange();
         
         }

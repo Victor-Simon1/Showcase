@@ -35,7 +35,7 @@ namespace Showcase
 
         public void Stop()
         {
-            throw new NotImplementedException();
+             InteractableWood.OnWoodGet -= OnProgressChange;
         }
         public bool CheckProgress()
         {
