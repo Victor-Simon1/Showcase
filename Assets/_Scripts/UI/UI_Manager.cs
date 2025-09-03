@@ -48,6 +48,8 @@ namespace Showcase
         {
             UIGameCanvasHelper.Show();
             UIMenuCanvasHelper.Hide();
+            
+            Cursor.lockState = CursorLockMode.Locked;
         }
         public void ShowUI()
         {
