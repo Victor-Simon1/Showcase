@@ -106,7 +106,7 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
-  - id: 2
+  - id: 3
     fields:
     - title: Name
       value: MayorDialog
@@ -116,20 +116,6 @@ MonoBehaviour:
       value: 0
       type: 1
       typeString: CustomFieldType_Number
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 3
-    fields:
-    - title: Name
-      value: 
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: false
-      type: 2
-      typeString: CustomFieldType_Boolean
     - title: Description
       value: 
       type: 0
@@ -297,11 +283,11 @@ MonoBehaviour:
       - title: fr
         value: 
         type: 4
-        typeString: 
+        typeString: CustomFieldType_Localization
       - title: en
         value: 
         type: 4
-        typeString: 
+        typeString: CustomFieldType_Localization
       - title: Menu Text en
         value: Greetings
         type: 4
@@ -333,7 +319,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1
-        y: 151.68715
+        y: 150.31728
         width: 160
         height: 30
     - id: 2
@@ -416,7 +402,7 @@ MonoBehaviour:
     - id: 3
       fields:
       - title: Title
-        value: Dialog1/Mayor/Sentence1
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Description
@@ -444,13 +430,13 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: fr
-        value: 
+        value: Comment vas tu voyageur?
         type: 4
-        typeString: 
+        typeString: CustomFieldType_Localization
       - title: en
-        value: 
+        value: How are you
         type: 4
-        typeString: 
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -465,15 +451,15 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: Variable[""] == true
+      conditionsString: Variable["MayorDialog"] == 2
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 505.68182
-        y: 166.13638
+        x: 507.17438
+        y: 163.39667
         width: 160
         height: 30
     - id: 4
@@ -783,11 +769,15 @@ MonoBehaviour:
       - title: fr
         value: 
         type: 4
-        typeString: 
+        typeString: CustomFieldType_Localization
       - title: en
         value: 
         type: 4
-        typeString: 
+        typeString: CustomFieldType_Localization
+      - title: EventGuid
+        value: 61984165-5e70-495d-916b-3ae0f7b95c43
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -800,7 +790,19 @@ MonoBehaviour:
       userScript: Variable["MayorDialog"] = 1
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 1
@@ -936,7 +938,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.5068264}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.73000026
   syncInfo:
     syncActors: 0

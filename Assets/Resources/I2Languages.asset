@@ -182,7 +182,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbw3KDQwAB2jgQrwXKgoZabdukdXdf_Qngz0a4mOODA9YU8Q6U3tySwXuHYGvLtie1XCOw/exec
     Google_SpreadsheetKey: 1z8sjjeMoILnGn8EYefK0S-l_0uQUh6i9sn_RCBH1--A
     Google_SpreadsheetName: I2Loc Showcase Localization
-    Google_LastUpdatedVersion: 1756908228791
+    Google_LastUpdatedVersion: 1756908298693
     Google_Password: change_this
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

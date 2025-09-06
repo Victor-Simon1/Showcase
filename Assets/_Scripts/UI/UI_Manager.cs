@@ -58,6 +58,7 @@ namespace Showcase
             UIGameCanvasHelper.Hide();
             //Replace with function cut all move/interaction
             PlayerMovementInput.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
         }
 
         public void HideUI()
@@ -67,6 +68,7 @@ namespace Showcase
             UISettingsCanvasHelper.Hide();
             //Replace with function cut all move/interaction
             PlayerMovementInput.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

@@ -37,6 +37,7 @@ namespace Showcase
             //ServiceLocator.GetService<UI_Game>().ShowDialog(this);
             //ServiceLocator.GetService<PlayerController>().enabled = false;
             //ServiceLocator.GetService<PlayerController>().gameObject.GetComponent<PlayerAnimation>().enabled = false;
+           
             
             //Si derniere dialog
             EndInteraction();

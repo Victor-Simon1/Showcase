@@ -1,5 +1,6 @@
 using System;
 using MyUnityPackage.ProgressionSystem;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 
@@ -53,6 +54,7 @@ namespace Showcase
 
             if (CheckProgress())
             {
+                DialogueLua.SetVariable("MayorDialog",DialogueLua.GetVariable("MayorDialog").AsInt+1);
                 MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'allumer des lampes! ");
                 OnCompleted?.Invoke();
             }

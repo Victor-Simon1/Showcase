@@ -1,6 +1,8 @@
 using MyUnityPackage.ProgressionSystem;
 using MyUnityPackage.Toolkit;
+using PixelCrushers.DialogueSystem.Wrappers;
 using System;
+using System.Collections.Generic;
 
 namespace Showcase
 {
@@ -66,7 +68,7 @@ namespace Showcase
             if(IsCompleted || pnj != PNJ.Mayor)
                 return;
             OnProgressChange();
-        
+         
         }
 
       
