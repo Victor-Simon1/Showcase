@@ -17,17 +17,19 @@ namespace Showcase
         public int CurrentProgression {get;set;}
 
         public int MaxProgression {get;set;}
+        public PNJ Pnj {get;set;}
 
         public event Action<int, int> OnProgress;
         public event Action OnCompleted;
 
 
-        public VillagerTalkObjective(string _title, string _description, int _countRequired)
+        public VillagerTalkObjective(string _title, string _description, int _countRequired,PNJ _pnj)
         {
             Title = _title;
             Description = _description;
             CurrentProgression = 0;
             MaxProgression = _countRequired;
+            Pnj = _pnj;
         }
         public void Start()
         {
@@ -65,7 +67,7 @@ namespace Showcase
         }
         public void OnProgressChangePNJ(PNJ pnj)
         {
-            if(IsCompleted || pnj != PNJ.Mayor)
+            if(IsCompleted || pnj != Pnj)
                 return;
             OnProgressChange();
          

@@ -1,5 +1,6 @@
 using System;
 using MyUnityPackage.ProgressionSystem;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
 namespace Showcase
@@ -42,10 +43,8 @@ namespace Showcase
             return IsCompleted = CurrentProgression >= MaxProgression;
         }
 
-        public bool IsComplete()
-        {
-            return IsCompleted;
-        }
+        public bool IsComplete() => IsCompleted;
+
 
         public void OnProgressChange()
         {
@@ -54,6 +53,7 @@ namespace Showcase
             MyUnityPackage.Toolkit.Logger.LogMessageEditor("WOOD On ProgrssChange");
             if (CheckProgress())
             {
+                DialogueLua.SetVariable("CarpenterDialog",DialogueLua.GetVariable("CarpenterDialog").AsInt+1);
                 MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
                 OnCompleted?.Invoke();
             }

@@ -4,18 +4,19 @@ using UnityEngine;
 
 namespace Showcase
 {
-    [CreateAssetMenu(fileName = "MayorSecondTalkSO", menuName = "ScriptableObjects/Quest/MayorSecondTalkSO")]
+    [CreateAssetMenu(fileName = "MayorSecondTalkSO", menuName = "ScriptableObjects/Quest/Villager/MayorSecondTalkSO")]
     public class MayorSecondTalkSO : ObjectiveDataSO
     {
         public override IQuestObjective CreateRuntimeObjective()
         {
-            var villagerTalkObjective = new VillagerTalkObjective(title, "", 1);
+            var villagerTalkObjective = new VillagerTalkObjective(title, "", 1,PNJ.Mayor);
             villagerTalkObjective.OnCompleted += EndDialog;
             return villagerTalkObjective;
         }
         private void EndDialog()
         {
             ServiceLocator.GetService<QuestManager>().ActivateQuest("Quest2");
+            ServiceLocator.GetService<QuestManager>().ActivateQuest("Quest3");
         }
     }
 }

@@ -16,4 +16,6 @@ MonoBehaviour:
   title: Help the carpenter
   description: Quest number 1
   steps:
+  - {fileID: 11400000, guid: 9187712ed11e783478738fcc7bdf4633, type: 2}
   - {fileID: 11400000, guid: a375ad8e22a8f97488816fcaf25fc9b5, type: 2}
+  - {fileID: 11400000, guid: 9187712ed11e783478738fcc7bdf4633, type: 2}

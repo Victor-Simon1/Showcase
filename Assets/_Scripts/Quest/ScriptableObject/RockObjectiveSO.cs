@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Showcase
 {
-    [CreateAssetMenu(fileName = "RockObjectiveSO", menuName = "ScriptableObjects/RockObjectiveSO")]
+    [CreateAssetMenu(fileName = "RockObjectiveSO", menuName = "ScriptableObjects/Quest/Pickable/RockObjectiveSO")]
     public class RockObjectiveSO : ObjectiveDataSO
     {
         public override IQuestObjective CreateRuntimeObjective()

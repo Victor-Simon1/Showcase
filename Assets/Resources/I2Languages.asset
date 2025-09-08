@@ -97,74 +97,122 @@ MonoBehaviour:
       - Showcase
       Flags: 0000
       Languages_Touch: []
-    - Term: Dialogue System/Conversation/MayorGreetings/Entry/001/Mayor/Menu Text
+    - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/001/Mayor/Dialogue
+        Text
       TermType: 0
       Description: 
       Languages:
-      - Greetings
+      - Hello traveler, I could really use your help!
+      - Bonjour voyageur, j'aurais bien besoin de votre aide !
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/002/Player/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - Yes of course
+      - Oui bien sur
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/003/Mayor/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - Found some wood? Thank you so much, here's your reward!
+      - "Vous avez trouv\xE9 du bois? Mille merci voici votre r\xE9compense !"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/005/Player/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - You're welcome, don't hesitate if you need anything else.
+      - "De rien, n'h\xE9sitez pas si vous avez besoin d'autres"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/006/Mayor/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - I need some wood but my son is sick and I have to stay with him, could you
+        go get me some?
+      - "J'aurais besoin de bois mais mon fils est malade et je dois rest\xE9 pr\xE9s
+        de lui, pourriez allez m'en chercher?"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/007/Player/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - Yes of course
+      - Oui bien sur
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/001/Mayor/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - Welcome stranger to our noble village! What are you doing here?
       - "Bienvenu \xE9tranger dans notre noble village! Que venez vous faire par
         ici?"
       Flags: 0000
       Languages_Touch: []
-    - Term: Dialogue System/Conversation/MayorGreetings/Entry/002/Mayor/Menu Text
+    - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/002/Mayor/Dialogue
+        Text
       TermType: 0
       Description: 
       Languages:
-      - Have you found?
+      - '#VALUE!'
       - 
       Flags: 0000
       Languages_Touch: []
-    - Term: Dialogue System/Conversation/MayorGreetings/Entry/004/Player/Menu Text
+    - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/004/Player/Dialogue
+        Text
       TermType: 0
       Description: 
       Languages:
-      - Not Yet
+      - '#VALUE!'
       - 
       Flags: 0000
       Languages_Touch: []
-    - Term: Dialogue System/Conversation/MayorGreetings/Entry/006/Player/Menu Text
+    - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/006/Player/Dialogue
+        Text
       TermType: 0
       Description: 
       Languages:
-      - What
+      - I'm just a simple traveler, or my adventures brought me here! I help people
+        I meet for a few coins, so if help is needed, I'm your man!
       - "Je ne suis qu'un simple voyageur, ou mes aventures m'on amen\xE9 ici ! J'aide
         les personnes que je rencontre contre quelques pieces donc si aide il y'a
         besoinn je suis votre homme !"
       Flags: 0000
       Languages_Touch: []
-    - Term: Dialogue System/Conversation/MayorGreetings/Entry/007/Mayor/Menu Text
+    - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/007/Mayor/Dialogue
+        Text
       TermType: 0
       Description: 
       Languages:
-      - And you
+      - Well, we can say that you've come at a good time. Recently the village has
+        had some problems, particularly with the streetlights which no longer work
+        properly. Could you take a look at what's going on?
       - "Et bien, on peut dire que vous tombez bien dernierement le village a eu
         quelque probl\xE9mes, nottament au niveau des lampadaires qui ne marches
         plus correctement, si vous pourriez regardez ce qu'il se passe?"
       Flags: 0000
       Languages_Touch: []
-    - Term: Dialogue System/Conversation/MayorGreetings/Entry/010/Player/Menu Text
+    - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/010/Player/Dialogue
+        Text
       TermType: 0
       Description: 
       Languages:
-      - Maybe
+      - '#VALUE!'
       - 
-      Flags: 0000
-      Languages_Touch: []
-    - Term: Dialog/Dialog1/Mayor/Sentence1
-      TermType: 0
-      Description: test desc
-      Languages:
-      - 
-      - "Bienvenu \xE9tranger dans notre noble village! Que venez vous faire par
-        ici?"
-      Flags: 0000
-      Languages_Touch: []
-    - Term: Dialog/Dialog1/Player/Sentence1
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - "Je ne suis qu'un simple voyageur, ou mes aventures m'on amen\xE9 ici ! "
       Flags: 0000
       Languages_Touch: []
     CaseInsensitiveTerms: 0
@@ -182,7 +230,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbw3KDQwAB2jgQrwXKgoZabdukdXdf_Qngz0a4mOODA9YU8Q6U3tySwXuHYGvLtie1XCOw/exec
     Google_SpreadsheetKey: 1z8sjjeMoILnGn8EYefK0S-l_0uQUh6i9sn_RCBH1--A
     Google_SpreadsheetName: I2Loc Showcase Localization
-    Google_LastUpdatedVersion: 1756908298693
+    Google_LastUpdatedVersion: 1757346717577
     Google_Password: change_this
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2

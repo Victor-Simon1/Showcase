@@ -11,6 +11,8 @@ namespace Showcase
     public enum PNJ
     {
         Mayor,
+        Carpenter,
+        Blacksmith,
     }
     public class InteractableVillager : AInteractable
     {

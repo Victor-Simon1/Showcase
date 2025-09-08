@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using MyUnityPackage.ProgressionSystem;
+using PixelCrushers.DialogueSystem;
 
 namespace Showcase
 {
@@ -54,6 +55,7 @@ namespace Showcase
 
             if (CheckProgress())
             {
+                DialogueLua.SetVariable("BlacksmithDialog",DialogueLua.GetVariable("BlacksmithDialog").AsInt+1);
                 MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
                 OnCompleted?.Invoke();
             }
