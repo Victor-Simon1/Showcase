@@ -29,56 +29,56 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Audio
       - Sons
+      - Audio
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Play
       TermType: 0
       Description: test desc
       Languages:
-      - Play
       - Jouer
+      - Play
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Quest
       TermType: 0
       Description: 
       Languages:
-      - Quests
       - Quetes
+      - Quests
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Quit
       TermType: 0
       Description: 
       Languages:
-      - Quit
       - Quittez
+      - Quit
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Resume
       TermType: 0
       Description: 
       Languages:
-      - Resume
       - Retour
+      - Resume
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Settings
       TermType: 0
       Description: 
       Languages:
-      - Settings
       - Parametres
+      - Settings
       Flags: 0000
       Languages_Touch: []
     - Term: UI/MainMenu
       TermType: 0
       Description: 
       Languages:
-      - Main Menu
       - Menu Principale
+      - Main Menu
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Pause
@@ -101,32 +101,32 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Language
       - Langage
+      - Language
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Settings/Quality
       TermType: 0
       Description: 
       Languages:
-      - Quality
       - "Qualit\xE9"
+      - Quality
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Settings/Fullscreen
       TermType: 0
       Description: 
       Languages:
-      - Full screen
       - "Plein \xE9cran"
+      - Full screen
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Settings/Resolution
       TermType: 0
       Description: 
       Languages:
-      - Resolution
       - "R\xE9solution"
+      - Resolution
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Settings/FPS
@@ -142,8 +142,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Hello traveler, I could really use your help!
       - Bonjour voyageur, j'aurais bien besoin de votre aide !
+      - Hello traveler, I could really use your help!
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/002/Player/Dialogue
@@ -151,8 +151,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Yes of course
       - Oui bien sur
+      - Yes of course
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/003/Mayor/Dialogue
@@ -160,8 +160,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Found some wood? Thank you so much, here's your reward!
       - "Vous avez trouv\xE9 du bois? Mille merci voici votre r\xE9compense !"
+      - Found some wood? Thank you so much, here's your reward!
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/005/Player/Dialogue
@@ -169,8 +169,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - You're welcome, don't hesitate if you need anything else.
       - "De rien, n'h\xE9sitez pas si vous avez besoin d'autres"
+      - You're welcome, don't hesitate if you need anything else.
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/006/Mayor/Dialogue
@@ -178,10 +178,10 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - I need some wood but my son is sick and I have to stay with him, could you
-        go get me some?
       - "J'aurais besoin de bois mais mon fils est malade et je dois rest\xE9 pr\xE9s
         de lui, pourriez allez m'en chercher?"
+      - I need some wood but my son is sick and I have to stay with him, could you
+        go get me some?
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/007/Player/Dialogue
@@ -189,8 +189,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Yes of course
       - Oui bien sur
+      - Yes of course
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/001/Mayor/Dialogue
@@ -198,9 +198,9 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Welcome stranger to our noble village! What are you doing here?
       - "Bienvenu \xE9tranger dans notre noble village! Que venez vous faire par
         ici?"
+      - Welcome stranger to our noble village! What are you doing here?
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/002/Mayor/Dialogue
@@ -208,8 +208,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - '#VALUE!'
       - 
+      - '#VALUE!'
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/004/Player/Dialogue
@@ -217,8 +217,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - '#VALUE!'
       - 
+      - '#VALUE!'
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/006/Player/Dialogue
@@ -226,11 +226,11 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - I'm just a simple traveler, or my adventures brought me here! I help people
-        I meet for a few coins, so if help is needed, I'm your man!
       - "Je ne suis qu'un simple voyageur, ou mes aventures m'on amen\xE9 ici ! J'aide
         les personnes que je rencontre contre quelques pieces donc si aide il y'a
         besoinn je suis votre homme !"
+      - I'm just a simple traveler, or my adventures brought me here! I help people
+        I meet for a few coins, so if help is needed, I'm your man!
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/007/Mayor/Dialogue
@@ -238,12 +238,12 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Well, we can say that you've come at a good time. Recently the village has
-        had some problems, particularly with the streetlights which no longer work
-        properly. Could you take a look at what's going on?
       - "Et bien, on peut dire que vous tombez bien dernierement le village a eu
         quelque probl\xE9mes, nottament au niveau des lampadaires qui ne marches
         plus correctement, si vous pourriez regardez ce qu'il se passe?"
+      - Well, we can say that you've come at a good time. Recently the village has
+        had some problems, particularly with the streetlights which no longer work
+        properly. Could you take a look at what's going on?
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/010/Player/Dialogue
@@ -251,19 +251,19 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - '#VALUE!'
       - 
+      - '#VALUE!'
       Flags: 0000
       Languages_Touch: []
     CaseInsensitiveTerms: 0
-    OnMissingTranslation: 1
+    OnMissingTranslation: 2
     mTerm_AppName: 
     mLanguages:
-    - Name: English
-      Code: en
-      Flags: 0
     - Name: French
       Code: fr
+      Flags: 0
+    - Name: English
+      Code: en
       Flags: 0
     IgnoreDeviceLanguage: 1
     _AllowUnloadingLanguages: 0

@@ -6885,6 +6885,10 @@ PrefabInstance:
       propertyPath: mLocalizeTarget
       value: 
       objectReference: {fileID: 174767533}
+    - target: {fileID: 6938859311004298206, guid: a1cba58272946cc47a6450b81c75e836, type: 3}
+      propertyPath: mGUI_ShowReferences
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7310737290390081156, guid: a1cba58272946cc47a6450b81c75e836, type: 3}
       propertyPath: langDropdown
       value: 

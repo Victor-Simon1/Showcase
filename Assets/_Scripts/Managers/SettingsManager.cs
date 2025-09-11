@@ -23,6 +23,7 @@ namespace Showcase
         int[] fpsArray = {30,60,120};
         void Start()
         {
+             Debug.Log("This system is in " + Application.systemLanguage);
             ServiceLocator.AddService<SettingsManager>(gameObject);
             resolutionsArray = Screen.resolutions;
 
@@ -57,19 +58,25 @@ namespace Showcase
         }
         public void ChangeLangage(int langIndex)
         {
-            string lang = Localization.GetLanguage(SystemLanguage.French);
+            string langAbbreviation= Localization.GetLanguage(SystemLanguage.French);//for Pixel Crusher dialog system
+            string langName = SystemLanguage.French.ToString();//For I2Loc
             switch (langIndex)
             {
                 case (int)ELang.FR:
-                    lang = Localization.GetLanguage(SystemLanguage.French);
+                    langAbbreviation = Localization.GetLanguage(SystemLanguage.French);
+                    langName = SystemLanguage.French.ToString();
                     break;
                 case (int)ELang.EN:
-                    lang = Localization.GetLanguage(SystemLanguage.English);
+                    langAbbreviation = Localization.GetLanguage(SystemLanguage.English);
+                    langName = SystemLanguage.English.ToString();
                     break;
             }
-            MUPLogger.LogMessage("Change to " + lang);
-            DialogueManager.SetLanguage(lang);
-            I2.Loc.LocalizationManager.CurrentLanguage = lang;
+            if(!I2.Loc.LocalizationManager.HasLanguage(langName))
+                MUPLogger.LogMessageWarningEditor("Can not find langage : " + langName + " for I2Loc");
+            MUPLogger.LogMessage("Change to " + langName + "-" + langAbbreviation);
+
+            DialogueManager.SetLanguage(langAbbreviation);
+            I2.Loc.LocalizationManager.CurrentLanguage = langName;
         }
 
 
