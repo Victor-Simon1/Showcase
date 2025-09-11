@@ -9,6 +9,7 @@ namespace I2.Loc
         #if UNITY_5_2 || UNITY_5_3 || UNITY_5_4_OR_NEWER
         void OnEnable()
 		{
+			Debug.Log("Here");
 			var dropdown = GetComponent<Dropdown>();
 			if (dropdown==null)
 				return;
@@ -35,7 +36,7 @@ namespace I2.Loc
 				index = 0;
 				dropdown.value = index;
 			}
-
+			Debug.Log(dropdown.options[index].text);
 			LocalizationManager.CurrentLanguage = dropdown.options[index].text;
         }
         #endif

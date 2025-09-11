@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MyUnityPackage.Toolkit;
 using PixelCrushers.DialogueSystem;
@@ -11,9 +12,11 @@ namespace Showcase
         private enum ELang
         {
             FR = 0,
-            EN
+            EN,
+            MAXLANG
         }
         [SerializeField] TMP_Dropdown resolutionDropdown;
+        [SerializeField] TMP_Dropdown langDropdown;
         [SerializeField] TMP_Dropdown fpsDropdown;
         Resolution[] resolutionsArray;
 
@@ -38,6 +41,14 @@ namespace Showcase
                 fpsStrings.Add(fps.ToString());
             }   
             fpsDropdown.AddOptions(fpsStrings);
+
+            List<string> langStrings= new List<string>();
+            for(int eLang = 0;eLang<(int)ELang.MAXLANG;eLang++)
+            {
+                langStrings.Add(Enum.GetName(typeof(ELang),eLang));
+                
+            }
+            langDropdown.AddOptions(langStrings);
         }
         public void ChangeQuality(int qualityIndex)
         {
@@ -46,7 +57,6 @@ namespace Showcase
         }
         public void ChangeLangage(int langIndex)
         {
-            MUPLogger.LogMessage("" + langIndex);
             string lang = Localization.GetLanguage(SystemLanguage.French);
             switch (langIndex)
             {
@@ -57,6 +67,7 @@ namespace Showcase
                     lang = Localization.GetLanguage(SystemLanguage.English);
                     break;
             }
+            MUPLogger.LogMessage("Change to " + lang);
             DialogueManager.SetLanguage(lang);
             I2.Loc.LocalizationManager.CurrentLanguage = lang;
         }
