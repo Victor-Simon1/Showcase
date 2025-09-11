@@ -79,6 +79,50 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 3
+    fields:
+    - title: Name
+      value: BlackSmith
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 4
+    fields:
+    - title: Name
+      value: Carpenter
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items: []
   locations:
   - id: 1
@@ -124,6 +168,20 @@ MonoBehaviour:
     fields:
     - title: Name
       value: CarpenterDialogIndex
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 5
+    fields:
+    - title: Name
+      value: BlackSmithDialogIndex
       type: 0
       typeString: 
     - title: Initial Value
@@ -295,12 +353,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: fr
-        value: "Bienvenu \xE9tranger dans notre noble village! Que venez vous faire
-          par ici?"
+        value: Greetings
         type: 4
         typeString: CustomFieldType_Localization
       - title: en
-        value: Welcome stranger to our noble village! What are you doing here?
+        value: Greetings
         type: 4
         typeString: CustomFieldType_Localization
       - title: Menu Text en
@@ -367,11 +424,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: fr
-        value: 
+        value: Have you found?
         type: 4
         typeString: 
       - title: en
-        value: '#VALUE!'
+        value: Have you found?
         type: 4
         typeString: 
       - title: Menu Text en
@@ -507,11 +564,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: fr
-        value: 
+        value: Not Yet
         type: 4
         typeString: 
       - title: en
-        value: '#VALUE!'
+        value: Not Yet
         type: 4
         typeString: 
       - title: Menu Text en
@@ -635,14 +692,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: fr
-        value: "Je ne suis qu'un simple voyageur, ou mes aventures m'on amen\xE9
-          ici ! J'aide les personnes que je rencontre contre quelques pieces donc
-          si aide il y'a besoinn je suis votre homme !"
+        value: What
         type: 4
         typeString: 
       - title: en
-        value: I'm just a simple traveler, or my adventures brought me here! I help
-          people I meet for a few coins, so if help is needed, I'm your man!
+        value: What
         type: 4
         typeString: 
       - title: Menu Text en
@@ -709,15 +763,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: fr
-        value: "Et bien, on peut dire que vous tombez bien dernierement le village
-          a eu quelque probl\xE9mes, nottament au niveau des lampadaires qui ne marches
-          plus correctement, si vous pourriez regardez ce qu'il se passe?"
+        value: And you
         type: 4
         typeString: 
       - title: en
-        value: Well, we can say that you've come at a good time. Recently the village
-          has had some problems, particularly with the streetlights which no longer
-          work properly. Could you take a look at what's going on?
+        value: And you
         type: 4
         typeString: 
       - title: Menu Text en
@@ -914,11 +964,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: fr
-        value: 
+        value: Maybe
         type: 4
         typeString: 
       - title: en
-        value: '#VALUE!'
+        value: Maybe
         type: 4
         typeString: 
       - title: Menu Text en
@@ -1107,7 +1157,7 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: en
-        value: Hello traveler, I could really use your help!
+        value: Bonjour voyageur, j'aurais bien besoin de votre aide !
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1170,7 +1220,7 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: en
-        value: Yes of course
+        value: Oui bien sur
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1235,7 +1285,8 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: en
-        value: Found some wood? Thank you so much, here's your reward!
+        value: "Vous avez trouv\xE9 du bois? Mille merci voici votre r\xE9compense
+          !"
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1298,7 +1349,7 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: en
-        value: You're welcome, don't hesitate if you need anything else.
+        value: "De rien, n'h\xE9sitez pas si vous avez besoin d'autres"
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1363,8 +1414,8 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: en
-        value: I need some wood but my son is sick and I have to stay with him, could
-          you go get me some?
+        value: "J'aurais besoin de bois mais mon fils est malade et je dois rest\xE9
+          pr\xE9s de lui, pourriez allez m'en chercher?"
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1427,7 +1478,7 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: en
-        value: Yes of course
+        value: Oui bien sur
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1587,7 +1638,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 3
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -1633,7 +1684,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1663,6 +1714,448 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 161
+        y: 30
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: A REMPLIR
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: fr
+        value: FR
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: en
+        value: A REMPLIR
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 1
+        destinationConversationID: 3
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1
+        y: 181
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: A REMPLIR
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: fr
+        value: FR
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: en
+        value: A REMPLIR
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 2
+        destinationConversationID: 3
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 237
+        y: 181
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: A REMPLIR
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: fr
+        value: FR
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: en
+        value: A REMPLIR
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 3
+        destinationConversationID: 3
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1
+        y: 269
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: A REMPLIR
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: fr
+        value: FR
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: en
+        value: A REMPLIR
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 4
+        destinationConversationID: 3
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1
+        y: 367
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: fr
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["BlackSmithDialogIndex"] = Variable["BlackSmithDialogIndex"]
+        + 1
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1
+        y: 419
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: A REMPLIR
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: fr
+        value: FR
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: en
+        value: A REMPLIR
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 6
+        destinationConversationID: 3
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 237
+        y: 363
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: fr
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
       userScript: 
@@ -1671,8 +2164,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 239
+        y: 424
         width: 160
         height: 30
     entryGroups: []

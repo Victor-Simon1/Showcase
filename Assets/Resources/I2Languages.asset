@@ -17,68 +17,60 @@ MonoBehaviour:
     UserAgreesToHaveItInsideThePluginsFolder: 0
     GoogleLiveSyncIsUptoDate: 1
     mTerms:
-    - Term: UI/
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      Flags: 0000
-      Languages_Touch: []
     - Term: UI/Button/Audio
       TermType: 0
       Description: 
       Languages:
-      - Sons
       - Audio
+      - Sons
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Play
       TermType: 0
       Description: test desc
       Languages:
-      - Jouer
       - Play
+      - Jouer
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Quest
       TermType: 0
       Description: 
       Languages:
-      - Quetes
       - Quests
+      - Quetes
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Quit
       TermType: 0
       Description: 
       Languages:
-      - Quittez
       - Quit
+      - Quittez
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Resume
       TermType: 0
       Description: 
       Languages:
-      - Retour
       - Resume
+      - Retour
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Button/Settings
       TermType: 0
       Description: 
       Languages:
-      - Parametres
       - Settings
+      - Parametres
       Flags: 0000
       Languages_Touch: []
     - Term: UI/MainMenu
       TermType: 0
       Description: 
       Languages:
-      - Menu Principale
       - Main Menu
+      - Menu Principale
       Flags: 0000
       Languages_Touch: []
     - Term: UI/Pause
@@ -89,46 +81,6 @@ MonoBehaviour:
       - Pause
       Flags: 0000
       Languages_Touch: []
-    - Term: UI/TitleMenu
-      TermType: 0
-      Description: 
-      Languages:
-      - Showcase
-      - Showcase
-      Flags: 0000
-      Languages_Touch: []
-    - Term: UI/Settings/Langage
-      TermType: 0
-      Description: 
-      Languages:
-      - Langage
-      - Language
-      Flags: 0000
-      Languages_Touch: []
-    - Term: UI/Settings/Quality
-      TermType: 0
-      Description: 
-      Languages:
-      - "Qualit\xE9"
-      - Quality
-      Flags: 0000
-      Languages_Touch: []
-    - Term: UI/Settings/Fullscreen
-      TermType: 0
-      Description: 
-      Languages:
-      - "Plein \xE9cran"
-      - Full screen
-      Flags: 0000
-      Languages_Touch: []
-    - Term: UI/Settings/Resolution
-      TermType: 0
-      Description: 
-      Languages:
-      - "R\xE9solution"
-      - Resolution
-      Flags: 0000
-      Languages_Touch: []
     - Term: UI/Settings/FPS
       TermType: 0
       Description: 
@@ -137,13 +89,106 @@ MonoBehaviour:
       - FPS
       Flags: 0000
       Languages_Touch: []
+    - Term: UI/Settings/Fullscreen
+      TermType: 0
+      Description: 
+      Languages:
+      - Full screen
+      - "Plein \xE9cran"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Settings/Langage
+      TermType: 0
+      Description: 
+      Languages:
+      - Language
+      - Langage
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Settings/Quality
+      TermType: 0
+      Description: 
+      Languages:
+      - Quality
+      - "Qualit\xE9"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/Settings/Resolution
+      TermType: 0
+      Description: 
+      Languages:
+      - Resolution
+      - "R\xE9solution"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UI/TitleMenu
+      TermType: 0
+      Description: 
+      Languages:
+      - Showcase
+      - Showcase
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Blacksmith.Greetings/Entry/001/BlackSmith/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - A REMPLIR
+      - FR
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Blacksmith.Greetings/Entry/002/BlackSmith/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - A REMPLIR
+      - FR
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Blacksmith.Greetings/Entry/003/Player/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - A REMPLIR
+      - FR
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Blacksmith.Greetings/Entry/004/BlackSmith/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - A REMPLIR
+      - FR
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Dialogue System/Conversation/Blacksmith.Greetings/Entry/006/Player/Dialogue
+        Text
+      TermType: 0
+      Description: 
+      Languages:
+      - A REMPLIR
+      - FR
+      Flags: 0000
+      Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/001/Mayor/Dialogue
         Text
       TermType: 0
       Description: 
       Languages:
       - Bonjour voyageur, j'aurais bien besoin de votre aide !
-      - Hello traveler, I could really use your help!
+      - Bonjour voyageur, j'aurais bien besoin de votre aide !
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/002/Player/Dialogue
@@ -152,7 +197,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Oui bien sur
-      - Yes of course
+      - Oui bien sur
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/003/Mayor/Dialogue
@@ -161,7 +206,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "Vous avez trouv\xE9 du bois? Mille merci voici votre r\xE9compense !"
-      - Found some wood? Thank you so much, here's your reward!
+      - "Vous avez trouv\xE9 du bois? Mille merci voici votre r\xE9compense !"
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/005/Player/Dialogue
@@ -170,7 +215,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - "De rien, n'h\xE9sitez pas si vous avez besoin d'autres"
-      - You're welcome, don't hesitate if you need anything else.
+      - "De rien, n'h\xE9sitez pas si vous avez besoin d'autres"
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/006/Mayor/Dialogue
@@ -180,8 +225,8 @@ MonoBehaviour:
       Languages:
       - "J'aurais besoin de bois mais mon fils est malade et je dois rest\xE9 pr\xE9s
         de lui, pourriez allez m'en chercher?"
-      - I need some wood but my son is sick and I have to stay with him, could you
-        go get me some?
+      - "J'aurais besoin de bois mais mon fils est malade et je dois rest\xE9 pr\xE9s
+        de lui, pourriez allez m'en chercher?"
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Carpenter.Greetings/Entry/007/Player/Dialogue
@@ -190,7 +235,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Oui bien sur
-      - Yes of course
+      - Oui bien sur
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/001/Mayor/Dialogue
@@ -198,9 +243,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "Bienvenu \xE9tranger dans notre noble village! Que venez vous faire par
-        ici?"
-      - Welcome stranger to our noble village! What are you doing here?
+      - Greetings
+      - Greetings
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/002/Mayor/Dialogue
@@ -208,8 +252,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - '#VALUE!'
+      - Have you found?
+      - Have you found?
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/004/Player/Dialogue
@@ -217,8 +261,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - '#VALUE!'
+      - Not Yet
+      - Not Yet
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/006/Player/Dialogue
@@ -226,11 +270,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "Je ne suis qu'un simple voyageur, ou mes aventures m'on amen\xE9 ici ! J'aide
-        les personnes que je rencontre contre quelques pieces donc si aide il y'a
-        besoinn je suis votre homme !"
-      - I'm just a simple traveler, or my adventures brought me here! I help people
-        I meet for a few coins, so if help is needed, I'm your man!
+      - What
+      - What
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/007/Mayor/Dialogue
@@ -238,12 +279,8 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - "Et bien, on peut dire que vous tombez bien dernierement le village a eu
-        quelque probl\xE9mes, nottament au niveau des lampadaires qui ne marches
-        plus correctement, si vous pourriez regardez ce qu'il se passe?"
-      - Well, we can say that you've come at a good time. Recently the village has
-        had some problems, particularly with the streetlights which no longer work
-        properly. Could you take a look at what's going on?
+      - And you
+      - And you
       Flags: 0000
       Languages_Touch: []
     - Term: Dialogue System/Conversation/Mayor.Greetings/Entry/010/Player/Dialogue
@@ -251,26 +288,26 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - 
-      - '#VALUE!'
+      - Maybe
+      - Maybe
       Flags: 0000
       Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 2
     mTerm_AppName: 
     mLanguages:
-    - Name: French
-      Code: fr
-      Flags: 0
     - Name: English
       Code: en
+      Flags: 0
+    - Name: French
+      Code: fr
       Flags: 0
     IgnoreDeviceLanguage: 1
     _AllowUnloadingLanguages: 0
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycbw3KDQwAB2jgQrwXKgoZabdukdXdf_Qngz0a4mOODA9YU8Q6U3tySwXuHYGvLtie1XCOw/exec
     Google_SpreadsheetKey: 1z8sjjeMoILnGn8EYefK0S-l_0uQUh6i9sn_RCBH1--A
     Google_SpreadsheetName: I2Loc Showcase Localization
-    Google_LastUpdatedVersion: 1757592558925
+    Google_LastUpdatedVersion: 1757617441888
     Google_Password: change_this
     GoogleUpdateFrequency: 3
     GoogleInEditorCheckFrequency: 2
