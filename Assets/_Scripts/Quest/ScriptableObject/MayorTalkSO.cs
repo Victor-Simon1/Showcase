@@ -1,7 +1,6 @@
 using UnityEngine;
 using MyUnityPackage.ProgressionSystem;
 
-
 namespace Showcase
 {
      [CreateAssetMenu(fileName = "MayorTalkSO", menuName = "ScriptableObjects/Quest/Villager/MayorTalkSO")]

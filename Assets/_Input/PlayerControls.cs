@@ -400,24 +400,6 @@ namespace MyUnityPackage.Controller
             ""id"": ""fa366b2a-5425-4f95-bdae-17a9cc5ae67b"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""920cbeeb-56f5-47eb-a12c-9487d5125d69"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Attack"",
-                    ""type"": ""Button"",
-                    ""id"": ""0028ab77-62df-435c-b194-5f56e11c4807"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""ecc6ad74-46d1-4996-a17e-e2de0eca215f"",
@@ -428,83 +410,6 @@ namespace MyUnityPackage.Controller
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""88508044-30e1-44f8-909a-3ff56c80dcef"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""38a7b733-0aa1-41c3-90ab-36cc804daebd"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c99c14f8-1fe2-4511-9cc8-a976c7119d5d"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b7e3543f-1811-4adb-8d9a-c7dc477f0144"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Touch"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""31764206-79fb-4724-bb7f-0701a3863600"",
-                    ""path"": ""<Joystick>/trigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f6df69a9-ce6d-4b5c-8f44-5877064f3ec2"",
-                    ""path"": ""<XRController>/{PrimaryAction}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""712251d2-beb2-4210-bdf7-d6066675b6c3"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""cb196c24-6bd5-427e-9443-e2a9cd1db3a6"",
@@ -658,8 +563,6 @@ namespace MyUnityPackage.Controller
             m_PlayerMovement_Sprint = m_PlayerMovement.FindAction("Sprint", throwIfNotFound: true);
             // PlayerActions
             m_PlayerActions = asset.FindActionMap("PlayerActions", throwIfNotFound: true);
-            m_PlayerActions_Newaction = m_PlayerActions.FindAction("New action", throwIfNotFound: true);
-            m_PlayerActions_Attack = m_PlayerActions.FindAction("Attack", throwIfNotFound: true);
             m_PlayerActions_Interact = m_PlayerActions.FindAction("Interact", throwIfNotFound: true);
             // ThirdPerson
             m_ThirdPerson = asset.FindActionMap("ThirdPerson", throwIfNotFound: true);
@@ -890,8 +793,6 @@ namespace MyUnityPackage.Controller
         // PlayerActions
         private readonly InputActionMap m_PlayerActions;
         private List<IPlayerActionsActions> m_PlayerActionsActionsCallbackInterfaces = new List<IPlayerActionsActions>();
-        private readonly InputAction m_PlayerActions_Newaction;
-        private readonly InputAction m_PlayerActions_Attack;
         private readonly InputAction m_PlayerActions_Interact;
         /// <summary>
         /// Provides access to input actions defined in input action map "PlayerActions".
@@ -904,14 +805,6 @@ namespace MyUnityPackage.Controller
             /// Construct a new instance of the input action map wrapper class.
             /// </summary>
             public PlayerActionsActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-            /// <summary>
-            /// Provides access to the underlying input action "PlayerActions/Newaction".
-            /// </summary>
-            public InputAction @Newaction => m_Wrapper.m_PlayerActions_Newaction;
-            /// <summary>
-            /// Provides access to the underlying input action "PlayerActions/Attack".
-            /// </summary>
-            public InputAction @Attack => m_Wrapper.m_PlayerActions_Attack;
             /// <summary>
             /// Provides access to the underlying input action "PlayerActions/Interact".
             /// </summary>
@@ -942,12 +835,6 @@ namespace MyUnityPackage.Controller
             {
                 if (instance == null || m_Wrapper.m_PlayerActionsActionsCallbackInterfaces.Contains(instance)) return;
                 m_Wrapper.m_PlayerActionsActionsCallbackInterfaces.Add(instance);
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
-                @Attack.started += instance.OnAttack;
-                @Attack.performed += instance.OnAttack;
-                @Attack.canceled += instance.OnAttack;
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
@@ -962,12 +849,6 @@ namespace MyUnityPackage.Controller
             /// <seealso cref="PlayerActionsActions" />
             private void UnregisterCallbacks(IPlayerActionsActions instance)
             {
-                @Newaction.started -= instance.OnNewaction;
-                @Newaction.performed -= instance.OnNewaction;
-                @Newaction.canceled -= instance.OnNewaction;
-                @Attack.started -= instance.OnAttack;
-                @Attack.performed -= instance.OnAttack;
-                @Attack.canceled -= instance.OnAttack;
                 @Interact.started -= instance.OnInteract;
                 @Interact.performed -= instance.OnInteract;
                 @Interact.canceled -= instance.OnInteract;
@@ -1311,20 +1192,6 @@ namespace MyUnityPackage.Controller
         /// <seealso cref="PlayerActionsActions.RemoveCallbacks(IPlayerActionsActions)" />
         public interface IPlayerActionsActions
         {
-            /// <summary>
-            /// Method invoked when associated input action "New action" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnNewaction(InputAction.CallbackContext context);
-            /// <summary>
-            /// Method invoked when associated input action "Attack" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-            /// </summary>
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-            void OnAttack(InputAction.CallbackContext context);
             /// <summary>
             /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
             /// </summary>

@@ -1,8 +1,8 @@
 using System;
 using MyUnityPackage.ProgressionSystem;
+using MyUnityPackage.Toolkit;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
-
 
 namespace Showcase
 {
@@ -25,7 +25,7 @@ namespace Showcase
         }
         public void Start()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("START LIGH OBJECTIF! ");
+            MUPLogger.LogMessageEditor("START LIGH OBJECTIF! ");
             InteractableLight.OnLightOn += OnProgressChange;
 
             InteractableLight[] lightArray = GameObject.FindObjectsOfType<InteractableLight>();
@@ -55,7 +55,7 @@ namespace Showcase
             if (CheckProgress())
             {
                 DialogueLua.SetVariable("MayorDialog",DialogueLua.GetVariable("MayorDialog").AsInt+1);
-                MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'allumer des lampes! ");
+                MUPLogger.LogMessageEditor("Completion de la mission d'allumer des lampes! ");
                 OnCompleted?.Invoke();
             }
         }

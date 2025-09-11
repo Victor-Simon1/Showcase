@@ -1,7 +1,7 @@
-using UnityEngine;
 using System;
 using MyUnityPackage.ProgressionSystem;
 using PixelCrushers.DialogueSystem;
+using MyUnityPackage.Toolkit;
 
 namespace Showcase
 {
@@ -30,7 +30,7 @@ namespace Showcase
         
         public void Start()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("START WOOD OBJECTIF! ");
+            MUPLogger.LogMessageEditor("START WOOD OBJECTIF! ");
             InteractableRock.OnRockGet += OnProgressChange;
         }
 
@@ -56,7 +56,7 @@ namespace Showcase
             if (CheckProgress())
             {
                 DialogueLua.SetVariable("BlacksmithDialog",DialogueLua.GetVariable("BlacksmithDialog").AsInt+1);
-                MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
+                MUPLogger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
                 OnCompleted?.Invoke();
             }
         }

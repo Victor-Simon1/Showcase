@@ -1,7 +1,7 @@
 using System;
 using MyUnityPackage.ProgressionSystem;
+using MyUnityPackage.Toolkit;
 using PixelCrushers.DialogueSystem;
-using UnityEngine;
 
 namespace Showcase
 {
@@ -30,7 +30,7 @@ namespace Showcase
         
         public void Start()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("START WOOD OBJECTIF! ");
+            MUPLogger.LogMessageEditor("START WOOD OBJECTIF! ");
             InteractableWood.OnWoodGet += OnProgressChange;
         }
 
@@ -50,11 +50,11 @@ namespace Showcase
         {
             CurrentProgression++;
             OnProgress?.Invoke(CurrentProgression, MaxProgression);
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("WOOD On ProgrssChange");
+            MUPLogger.LogMessageEditor("WOOD On ProgrssChange");
             if (CheckProgress())
             {
                 DialogueLua.SetVariable("CarpenterDialog",DialogueLua.GetVariable("CarpenterDialog").AsInt+1);
-                MyUnityPackage.Toolkit.Logger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
+                MUPLogger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
                 OnCompleted?.Invoke();
             }
         }

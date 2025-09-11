@@ -3,7 +3,6 @@ using MyUnityPackage.Controller;
 using MyUnityPackage.Toolkit;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Logger =  MyUnityPackage.Toolkit.Logger;
 
 using PlayerInputManager = MyUnityPackage.Controller.PlayerInputManager;
 
@@ -12,8 +11,6 @@ namespace Showcase
     [DefaultExecutionOrder(-2)]
     public class PlayerActions : MonoBehaviour,PlayerControls.IPlayerActionsActions
     {
-
-
 
         public event Action OnPressInteract;
         void Awake()
@@ -41,24 +38,14 @@ namespace Showcase
             PlayerInputManager.Instance.PlayerControls.PlayerActions.RemoveCallbacks(this);
         }
 
-        public void OnAttack(InputAction.CallbackContext context)
-        {
-            //throw new System.NotImplementedException();
-        }
-
         public void OnInteract(InputAction.CallbackContext context)
         {
             if(!context.performed)
                 return;
-            Logger.LogMessage("Interact press");
+            MUPLogger.LogMessage("Interact press");
             OnPressInteract.Invoke();
-            //playerInteract.Interact();
         }
 
-        public void OnNewaction(InputAction.CallbackContext context)
-        {
-            //throw new System.NotImplementedException();
-        }
 
     }
 

@@ -4,8 +4,6 @@ using MyUnityPackage.Toolkit;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
-
-
 namespace Showcase
 {
     public enum PNJ
@@ -22,7 +20,7 @@ namespace Showcase
         [SerializeField] DialogueSystemTrigger dsTrigger;
         protected override void Init()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("INIT VILLAGER");
+            MUPLogger.LogMessageEditor("INIT VILLAGER");
             onInteractAction += InteractVillager;
             dsTrigger = GetComponent<DialogueSystemTrigger>();
         }
@@ -32,7 +30,7 @@ namespace Showcase
         }
         private void InteractVillager()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessage("Interaction avec un villageois ! ");
+            MUPLogger.LogMessage("Interaction avec un villageois ! ");
             OnTalkPNJ?.Invoke(pnj);
             //DialogueSystemTrigger dialog;
             DialogueManager.StartConversation(dsTrigger.conversation , ServiceLocator.GetService<PlayerActions>().transform, transform);

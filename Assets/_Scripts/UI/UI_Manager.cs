@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using MyUnityPackage.Toolkit;
 
 using PlayerInputManager = MyUnityPackage.Controller.PlayerInputManager;
-using Logger = MyUnityPackage.Toolkit.Logger;
+
 namespace Showcase
 {
     public class UI_Manager : MonoBehaviour, PlayerControls.IUIActions
@@ -32,7 +32,7 @@ namespace Showcase
         {
             if(!context.performed)
                 return;
-            Logger.LogMessage("OnShow");
+            MUPLogger.LogMessage("OnShow");
             if(!UIMenuCanvasHelper.Canvas.enabled)
             {
                 ShowUI();
@@ -53,7 +53,7 @@ namespace Showcase
         }
         public void ShowUI()
         {
-            Logger.LogMessage("ShowUI");
+            MUPLogger.LogMessage("ShowUI");
             UISettingsCanvasHelper.Show();
             UIGameCanvasHelper.Hide();
             //Replace with function cut all move/interaction
@@ -63,7 +63,7 @@ namespace Showcase
 
         public void HideUI()
         {
-            Logger.LogMessage("HideUI");
+            MUPLogger.LogMessage("HideUI");
             UIGameCanvasHelper.Show();
             UISettingsCanvasHelper.Hide();
             //Replace with function cut all move/interaction

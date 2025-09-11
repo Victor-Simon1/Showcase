@@ -1,6 +1,7 @@
 using MyUnityPackage.Interactions;
-using UnityEngine;
 using System;
+using MyUnityPackage.Toolkit;
+
 namespace Showcase
 {
     public class InteractableWood : AInteractable
@@ -13,7 +14,7 @@ namespace Showcase
 
         void InteractWood()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("Get Wood");
+            MUPLogger.LogMessageEditor("Get Wood");
             OnWoodGet?.Invoke();
             EndInteraction();
         }

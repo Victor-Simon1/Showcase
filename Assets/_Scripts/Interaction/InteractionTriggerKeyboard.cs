@@ -1,10 +1,6 @@
 using System;
-using MyUnityPackage.Controller;
 using MyUnityPackage.Interactions;
 using MyUnityPackage.Toolkit;
-using Showcase;
-using UnityEngine;
-
 
 namespace Showcase
 {
@@ -15,8 +11,6 @@ namespace Showcase
         public override event Action onExit;
         public override event Action onInteract;
 
-        
-
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -25,7 +19,7 @@ namespace Showcase
 
         void OnInteract()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("Press InteractionTrigger");
+            MUPLogger.LogMessageEditor("Press InteractionTrigger");
             onInteract?.Invoke();
         }
     }

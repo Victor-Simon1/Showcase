@@ -2,6 +2,7 @@ using UnityEngine;
 using MyUnityPackage.Toolkit;
 using UnityEngine.Splines;
 using UnityEngine.Playables;
+using PixelCrushers.DialogueSystem;
 
 namespace Showcase
 {
@@ -12,6 +13,9 @@ namespace Showcase
         [SerializeField] PlayableDirector timelineEntrance;
         void Start()
         {
+            DialogueManager.SetLanguage(Localization.GetLanguage(SystemLanguage.French ));
+            I2.Loc.LocalizationManager.CurrentLanguage = Localization.GetLanguage(SystemLanguage.French );
+            
             ServiceLocator.AddService<UI_Menu>(gameObject);
             UIManager.AddCanvasUI<UI_Menu>(gameObject);
         }

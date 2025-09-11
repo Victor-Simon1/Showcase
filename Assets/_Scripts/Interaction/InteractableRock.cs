@@ -1,6 +1,6 @@
 using MyUnityPackage.Interactions;
-using UnityEngine;
 using System;
+
 namespace Showcase
 {
     public class InteractableRock : AInteractable

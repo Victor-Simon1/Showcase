@@ -1,15 +1,18 @@
 using System.Collections.Generic;
-using I2.Loc;
 using MyUnityPackage.Toolkit;
+using PixelCrushers.DialogueSystem;
 using TMPro;
 using UnityEngine;
-using Logger = MyUnityPackage.Toolkit.Logger;
 
 namespace Showcase
 {
     public class SettingsManager : MonoBehaviour
     {
-
+        private enum ELang
+        {
+            FR = 0,
+            EN
+        }
         [SerializeField] TMP_Dropdown resolutionDropdown;
         [SerializeField] TMP_Dropdown fpsDropdown;
         Resolution[] resolutionsArray;
@@ -38,19 +41,30 @@ namespace Showcase
         }
         public void ChangeQuality(int qualityIndex)
         {
-            Logger.LogMessage("" + qualityIndex);
+            MUPLogger.LogMessage("" + qualityIndex);
             QualitySettings.SetQualityLevel(qualityIndex,true);
         }
         public void ChangeLangage(int langIndex)
         {
-            Logger.LogMessage("" + langIndex);
-            //LocalizationManager.CurrentLanguage = langIndex;
+            MUPLogger.LogMessage("" + langIndex);
+            string lang = Localization.GetLanguage(SystemLanguage.French);
+            switch (langIndex)
+            {
+                case (int)ELang.FR:
+                    lang = Localization.GetLanguage(SystemLanguage.French);
+                    break;
+                case (int)ELang.EN:
+                    lang = Localization.GetLanguage(SystemLanguage.English);
+                    break;
+            }
+            DialogueManager.SetLanguage(lang);
+            I2.Loc.LocalizationManager.CurrentLanguage = lang;
         }
 
 
         public void ChangeResolution(int resolutionIndex)
         {
-            Logger.LogMessage("Change resolution ");
+            MUPLogger.LogMessage("Change resolution ");
             Screen.SetResolution(resolutionsArray[resolutionIndex].width,
                                 resolutionsArray[resolutionIndex].height,
                                 Screen.fullScreen );

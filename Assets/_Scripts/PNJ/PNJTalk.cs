@@ -2,10 +2,9 @@ using System;
 using UnityEngine;
 using MyUnityPackage.Toolkit;
 using MyUnityPackage.Controller;
+
 namespace Showcase
 {
-    
-
     public class PNJTalk : MonoBehaviour
     {
         public PNJ pnj;

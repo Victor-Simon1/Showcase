@@ -1,8 +1,6 @@
 using MyUnityPackage.ProgressionSystem;
 using MyUnityPackage.Toolkit;
-using PixelCrushers.DialogueSystem.Wrappers;
 using System;
-using System.Collections.Generic;
 
 namespace Showcase
 {
@@ -33,7 +31,7 @@ namespace Showcase
         }
         public void Start()
         {
-            MyUnityPackage.Toolkit.Logger.LogMessageEditor("START TALK OBJECTIF! ");
+            MUPLogger.LogMessageEditor("START TALK OBJECTIF! ");
              
            //if(InteractableVillager.OnTalkPnjIsNull())
             InteractableVillager.OnTalkPNJ += OnProgressChangePNJ;
@@ -55,13 +53,13 @@ namespace Showcase
         }
         public void OnProgressChange()
         {
-            Logger.LogMessageEditor("OnProggressChange de la mission de parler au maire ! ");
+            MUPLogger.LogMessageEditor("OnProggressChange de la mission de parler au maire ! ");
             CurrentProgression++;
             OnProgress?.Invoke(CurrentProgression, MaxProgression);
 
             if (CheckProgress())
             {
-                Logger.LogMessageEditor("Completion de la mission de parler au maire ! ");
+                MUPLogger.LogMessageEditor("Completion de la mission de parler au maire ! ");
                 OnCompleted?.Invoke();
             }
         }

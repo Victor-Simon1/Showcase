@@ -3,11 +3,10 @@ using UnityEngine.UI;
 using MyUnityPackage.Toolkit;
 using MyUnityPackage.ProgressionSystem;
 using TMPro;
-using MyUnityPackage.Interactions;
 
 namespace Showcase
 {
-    public class UI_Game : MonoBehaviour
+    public class UI_Game : UI_Base
     {
         [SerializeField] private Button buttonBack;
         QuestManager questManager;

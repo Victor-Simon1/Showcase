@@ -1,7 +1,7 @@
 using System;
 using MyUnityPackage.Interactions;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
+using MyUnityPackage.Toolkit;
 
 namespace Showcase
 {
@@ -22,7 +22,7 @@ namespace Showcase
             OnLightOn?.Invoke();
             isOn = !isOn;
             light.enabled = isOn;
-            MyUnityPackage.Toolkit.Logger.LogMessageWarningEditor("Interact ligth : " + isOn);
+            MUPLogger.LogMessageWarningEditor("Interact ligth : " + isOn);
         }
 
         
