@@ -34095,7 +34095,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_parent: {fileID: 2101126524355344185}
-  m_prefabs: []
+  m_prefabs:
+  - {fileID: 168688, guid: a5c98dfcec76e1847a0aa8d7c8a93459, type: 3}
   m_position: 0
 --- !u!1001 &2514995616785135541
 PrefabInstance:
