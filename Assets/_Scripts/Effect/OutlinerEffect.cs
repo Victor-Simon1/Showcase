@@ -14,7 +14,7 @@ public class OutlinerEffect : AEffect
 
     public override void OnEnable()
     {
-
+        //outlinable.enabled = true;
     }
 
     public override void OnEnter()

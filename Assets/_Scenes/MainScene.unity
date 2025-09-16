@@ -34875,10 +34875,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mayor
       objectReference: {fileID: 0}
-    - target: {fileID: 4764207472609285519, guid: 93dbee8a1be48064089ebae12d2c6869, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7075376421076385297, guid: 93dbee8a1be48064089ebae12d2c6869, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74.04
