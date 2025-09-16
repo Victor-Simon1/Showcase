@@ -409,6 +409,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4064594567019613536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &967849991383699094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4531474997769549262}
+  - component: {fileID: 2144814348704199498}
+  m_Layer: 0
+  m_Name: OutlinableEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4531474997769549262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967849991383699094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4985538828267515648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2144814348704199498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967849991383699094}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53ea97922dd9b141b2cb66a0c9051c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlinable: {fileID: 4764207472609285519}
 --- !u!1 &1321805739287631960
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +729,7 @@ GameObject:
   - component: {fileID: 324677794855772721}
   - component: {fileID: 6688525940099062287}
   - component: {fileID: 3890209865492297126}
+  - component: {fileID: 3638682959341369432}
   m_Layer: 0
   m_Name: Support3D
   m_TagString: Untagged
@@ -780,6 +826,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3638682959341369432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786186404946328096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2098103569141984269
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +915,7 @@ GameObject:
   - component: {fileID: 1218990537827897645}
   - component: {fileID: 2369123688293500255}
   - component: {fileID: 8671226190264600153}
+  - component: {fileID: 5358767440547767303}
   m_Layer: 0
   m_Name: Object
   m_TagString: Untagged
@@ -975,6 +1034,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5358767440547767303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389652042389692055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2794555867320416493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,6 +1568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2616992165427931192}
   - component: {fileID: 3220239397675560512}
+  - component: {fileID: 8635809819314631455}
   m_Layer: 0
   m_Name: Peasant Nolant
   m_TagString: Untagged
@@ -1608,6 +1680,18 @@ SkinnedMeshRenderer:
     m_Center: {x: -2.3283064e-10, y: 0.0011994755, z: -0.00040803547}
     m_Extent: {x: 0.003455709, y: 0.008865731, z: 0.0038897444}
   m_DirtyAABB: 0
+--- !u!114 &8635809819314631455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4069177555632860313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4082410981436555724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1864,7 @@ GameObject:
   - component: {fileID: 7880706177179114011}
   - component: {fileID: 5320220694536956709}
   - component: {fileID: 3671902970151305228}
+  - component: {fileID: 4764207472609285519}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Untagged
@@ -1823,7 +1908,8 @@ MonoBehaviour:
   delay: 0
   once: 0
   interactionTrigger: {fileID: 1968428947868980660}
-  effects: []
+  effects:
+  - {fileID: 2144814348704199498}
   conditions:
   - {fileID: 5141909557706648102}
   pnj: 0
@@ -1956,6 +2042,91 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4764207472609285519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624213678012866036}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe91dc294731a9428c0941ea7579110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complexMaskingMode: 0
+  drawingMode: 1
+  outlineLayer: 10
+  outlineTargets:
+  - CutoutMask: 8
+    renderer: {fileID: 7571003542041467087}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    cutoutTextureIndex: 0
+  - CutoutMask: 8
+    renderer: {fileID: 3220239397675560512}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    cutoutTextureIndex: 0
+  - CutoutMask: 8
+    renderer: {fileID: 6688525940099062287}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    cutoutTextureIndex: 0
+  - CutoutMask: 8
+    renderer: {fileID: 1218990537827897645}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    cutoutTextureIndex: 0
+  renderStyle: 1
+  outlineParameters:
+    enabled: 1
+    color: {r: 0.015686274, g: 0.6995437, b: 1, a: 1}
+    dilateShift: 0.4
+    blurShift: 0
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  backParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  frontParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
 --- !u!1 &4763720427241499457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2562,7 @@ Transform:
   m_Children:
   - {fileID: 3626338699481291760}
   - {fileID: 6079204232397757231}
+  - {fileID: 4531474997769549262}
   m_Father: {fileID: 7075376421076385297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5909753484954588677
@@ -3073,6 +3245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8335298914275127827}
   - component: {fileID: 7571003542041467087}
+  - component: {fileID: 5131916338872323903}
   m_Layer: 0
   m_Name: Hat
   m_TagString: Untagged
@@ -3184,6 +3357,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000003722962, y: 0.008676607, z: -0.0022646827}
     m_Extent: {x: 0.0034599465, y: 0.0023455431, z: 0.0035855323}
   m_DirtyAABB: 0
+--- !u!114 &5131916338872323903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8465582028839000535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8749184071147185212
 GameObject:
   m_ObjectHideFlags: 0

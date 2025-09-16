@@ -33386,6 +33386,18 @@ PrefabInstance:
       propertyPath: m_Events.m_Events.Array.data[1].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1066953511}
+    - target: {fileID: 3930688984322476725, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930688984322476725, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: outlineParameters.blurShift
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930688984322476725, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: outlineParameters.dilateShift
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4729241269214606908, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -33425,6 +33437,30 @@ PrefabInstance:
     - target: {fileID: 4729241269214606908, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769003170323638, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: stage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769003170323638, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: blurType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769003170323638, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769003170323638, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: dilateShift
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769003170323638, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: dilateQuality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287769003170323638, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
+      propertyPath: dilateIterations
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34838,6 +34874,10 @@ PrefabInstance:
     - target: {fileID: 4624213678012866036, guid: 93dbee8a1be48064089ebae12d2c6869, type: 3}
       propertyPath: m_Name
       value: Mayor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764207472609285519, guid: 93dbee8a1be48064089ebae12d2c6869, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7075376421076385297, guid: 93dbee8a1be48064089ebae12d2c6869, type: 3}
       propertyPath: m_LocalPosition.x
