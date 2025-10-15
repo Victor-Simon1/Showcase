@@ -22,7 +22,7 @@ namespace Showcase
             OnLightOn?.Invoke();
             isOn = !isOn;
             light.enabled = isOn;
-            MUPLogger.LogMessageWarningEditor("Interact ligth : " + isOn);
+            MUPLogger.Info("Interact ligth : " + isOn);
         }
 
         

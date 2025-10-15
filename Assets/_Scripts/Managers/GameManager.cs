@@ -14,6 +14,7 @@ namespace Showcase
         }
         void Start()
         {
+            questManager.Init();
             questManager.ActivateQuest("Quest1");
         }
         private void SetupGame()
@@ -23,7 +24,8 @@ namespace Showcase
             AudioUpdater[] audioUpdatersList = FindObjectsByType<AudioUpdater>(FindObjectsInactive.Include ,FindObjectsSortMode.None);
             foreach (AudioUpdater audioUpdater in audioUpdatersList)
             {
-                audioUpdater.Initialize(); 
+                //TODO
+                //audioUpdater.Initialize(); 
             }
         }
 

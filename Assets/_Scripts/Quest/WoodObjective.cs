@@ -30,7 +30,7 @@ namespace Showcase
         
         public void Start()
         {
-            MUPLogger.LogMessageEditor("START WOOD OBJECTIF! ");
+            MUPLogger.Info("START WOOD OBJECTIF! ");
             InteractableWood.OnWoodGet += OnProgressChange;
         }
 
@@ -50,11 +50,11 @@ namespace Showcase
         {
             CurrentProgression++;
             OnProgress?.Invoke(CurrentProgression, MaxProgression);
-            MUPLogger.LogMessageEditor("WOOD On ProgrssChange");
+            MUPLogger.Info("WOOD On ProgrssChange");
             if (CheckProgress())
             {
                 DialogueLua.SetVariable("CarpenterDialog",DialogueLua.GetVariable("CarpenterDialog").AsInt+1);
-                MUPLogger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
+                MUPLogger.Info("Completion de la mission d'aller chercher du bois! ");
                 OnCompleted?.Invoke();
             }
         }

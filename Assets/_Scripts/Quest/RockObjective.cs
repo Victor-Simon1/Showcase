@@ -30,7 +30,7 @@ namespace Showcase
         
         public void Start()
         {
-            MUPLogger.LogMessageEditor("START WOOD OBJECTIF! ");
+            MUPLogger.Info("START WOOD OBJECTIF! ");
             InteractableRock.OnRockGet += OnProgressChange;
         }
 
@@ -56,7 +56,7 @@ namespace Showcase
             if (CheckProgress())
             {
                 DialogueLua.SetVariable("BlacksmithDialog",DialogueLua.GetVariable("BlacksmithDialog").AsInt+1);
-                MUPLogger.LogMessageEditor("Completion de la mission d'aller chercher du bois! ");
+                MUPLogger.Info("Completion de la mission d'aller chercher du bois! ");
                 OnCompleted?.Invoke();
             }
         }

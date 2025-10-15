@@ -30,14 +30,14 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f19f04f625da435e81f1eb32895c90088b695c41"
+      "hash": "93f200d2d04e5efd282e429723c59a8c39e7c963"
     },
     "com.myunitypackage.toolkit": {
       "version": "https://github.com/AlexandreFlanquart/UnityPackage-Toolkit.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "3961a75aabc082d8d04ba7560824944d7465e176"
+      "hash": "afe8617d442a98531b6ee348d0c72ede1835489d"
     },
     "com.unity.ai.navigation": {
       "version": "2.0.7",

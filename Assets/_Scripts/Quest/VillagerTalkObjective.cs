@@ -31,7 +31,7 @@ namespace Showcase
         }
         public void Start()
         {
-            MUPLogger.LogMessageEditor("START TALK OBJECTIF! ");
+            MUPLogger.Info("START TALK OBJECTIF! ");
              
            //if(InteractableVillager.OnTalkPnjIsNull())
             InteractableVillager.OnTalkPNJ += OnProgressChangePNJ;
@@ -53,13 +53,13 @@ namespace Showcase
         }
         public void OnProgressChange()
         {
-            MUPLogger.LogMessageEditor("OnProggressChange de la mission de parler au maire ! ");
+            MUPLogger.Info("OnProggressChange de la mission de parler au maire ! ");
             CurrentProgression++;
             OnProgress?.Invoke(CurrentProgression, MaxProgression);
 
             if (CheckProgress())
             {
-                MUPLogger.LogMessageEditor("Completion de la mission de parler au maire ! ");
+                MUPLogger.Info("Completion de la mission de parler au maire ! ");
                 OnCompleted?.Invoke();
             }
         }

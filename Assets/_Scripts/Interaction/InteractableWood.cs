@@ -14,7 +14,7 @@ namespace Showcase
 
         void InteractWood()
         {
-            MUPLogger.LogMessageEditor("Get Wood");
+            MUPLogger.Info("Get Wood");
             OnWoodGet?.Invoke();
             EndInteraction();
         }

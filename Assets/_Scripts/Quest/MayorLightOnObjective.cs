@@ -25,7 +25,7 @@ namespace Showcase
         }
         public void Start()
         {
-            MUPLogger.LogMessageEditor("START LIGH OBJECTIF! ");
+            MUPLogger.Info("START LIGH OBJECTIF! ");
             InteractableLight.OnLightOn += OnProgressChange;
 
             InteractableLight[] lightArray = GameObject.FindObjectsOfType<InteractableLight>();
@@ -55,7 +55,7 @@ namespace Showcase
             if (CheckProgress())
             {
                 DialogueLua.SetVariable("MayorDialog",DialogueLua.GetVariable("MayorDialog").AsInt+1);
-                MUPLogger.LogMessageEditor("Completion de la mission d'allumer des lampes! ");
+                MUPLogger.Info("Completion de la mission d'allumer des lampes! ");
                 OnCompleted?.Invoke();
             }
         }

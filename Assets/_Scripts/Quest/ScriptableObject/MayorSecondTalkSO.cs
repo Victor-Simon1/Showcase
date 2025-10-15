@@ -9,7 +9,7 @@ namespace Showcase
     {
         public override IQuestObjective CreateRuntimeObjective()
         {
-            var villagerTalkObjective = new VillagerTalkObjective(title, "", 1,PNJ.Mayor);
+            var villagerTalkObjective = new VillagerTalkObjective("title", "", 1,PNJ.Mayor);
             villagerTalkObjective.OnCompleted += EndDialog;
             return villagerTalkObjective;
         }

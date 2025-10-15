@@ -19,13 +19,13 @@ public class OutlinerEffect : AEffect
 
     public override void OnEnter()
     {
-        MUPLogger.LogMessageEditor("Je rentre dans la zone");
+        MUPLogger.Info("Je rentre dans la zone");
         outlinable.enabled = true;
     }
 
     public override void OnExit()
     {
-        MUPLogger.LogMessageEditor("Je sors de la zone");
+        MUPLogger.Info("Je sors de la zone");
         outlinable.enabled = false;
     }
 

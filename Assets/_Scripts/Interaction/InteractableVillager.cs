@@ -20,7 +20,7 @@ namespace Showcase
         [SerializeField] DialogueSystemTrigger dsTrigger;
         protected override void Init()
         {
-            MUPLogger.LogMessageEditor("INIT VILLAGER");
+            MUPLogger.Info("INIT VILLAGER");
             onInteractAction += InteractVillager;
             dsTrigger = GetComponent<DialogueSystemTrigger>();
         }
@@ -30,7 +30,7 @@ namespace Showcase
         }
         private void InteractVillager()
         {
-            MUPLogger.LogMessage("Interaction avec un villageois ! ");
+            MUPLogger.Info("Interaction avec un villageois ! ");
             OnTalkPNJ?.Invoke(pnj);
             //DialogueSystemTrigger dialog;
             DialogueManager.StartConversation(dsTrigger.conversation , ServiceLocator.GetService<PlayerActions>().transform, transform);

@@ -32,7 +32,7 @@ namespace Showcase
         {
             if(!context.performed)
                 return;
-            MUPLogger.LogMessage("OnShow");
+            MUPLogger.Info("OnShow");
             if(!UIMenuCanvasHelper.Canvas.enabled)
             {
                 ShowUI();
@@ -53,7 +53,7 @@ namespace Showcase
         }
         public void ShowUI()
         {
-            MUPLogger.LogMessage("ShowUI");
+            MUPLogger.Info("ShowUI");
             UISettingsCanvasHelper.Show();
             UIGameCanvasHelper.Hide();
             //Replace with function cut all move/interaction
@@ -63,7 +63,7 @@ namespace Showcase
 
         public void HideUI()
         {
-            MUPLogger.LogMessage("HideUI");
+            MUPLogger.Info("HideUI");
             UIGameCanvasHelper.Show();
             UISettingsCanvasHelper.Hide();
             //Replace with function cut all move/interaction

@@ -53,7 +53,7 @@ namespace Showcase
         }
         public void ChangeQuality(int qualityIndex)
         {
-            MUPLogger.LogMessage("" + qualityIndex);
+            MUPLogger.Info("" + qualityIndex);
             QualitySettings.SetQualityLevel(qualityIndex,true);
         }
         public void ChangeLangage(int langIndex)
@@ -72,8 +72,8 @@ namespace Showcase
                     break;
             }
             if(!I2.Loc.LocalizationManager.HasLanguage(langName))
-                MUPLogger.LogMessageWarningEditor("Can not find langage : " + langName + " for I2Loc");
-            MUPLogger.LogMessage("Change to " + langName + "-" + langAbbreviation);
+                MUPLogger.Warning("Can not find langage : " + langName + " for I2Loc");
+            MUPLogger.Info("Change to " + langName + "-" + langAbbreviation);
 
             DialogueManager.SetLanguage(langAbbreviation);
             I2.Loc.LocalizationManager.CurrentLanguage = langName;
@@ -82,7 +82,7 @@ namespace Showcase
 
         public void ChangeResolution(int resolutionIndex)
         {
-            MUPLogger.LogMessage("Change resolution ");
+            MUPLogger.Info("Change resolution ");
             Screen.SetResolution(resolutionsArray[resolutionIndex].width,
                                 resolutionsArray[resolutionIndex].height,
                                 Screen.fullScreen );
