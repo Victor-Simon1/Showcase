@@ -622,6 +622,51 @@ Transform:
   - {fileID: 2596162176306554450}
   m_Father: {fileID: 8391356325253968762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4057661201354733898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197647669202523351}
+  - component: {fileID: 3407730157670777804}
+  m_Layer: 0
+  m_Name: OnHover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1197647669202523351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057661201354733898}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5309946226200556273}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3407730157670777804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057661201354733898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ca425c04f82d4408ef6e47d797e40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredForEffects: 0
 --- !u!1 &4325326924264103925
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +991,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5127883744155193014}
+  - {fileID: 1197647669202523351}
   m_Father: {fileID: 8391356325253968762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6408611127081386440
@@ -1123,9 +1169,11 @@ MonoBehaviour:
   delay: 0
   once: 0
   interactionTrigger: {fileID: 8787255061099110863}
-  effects: []
+  effects:
+  - {fileID: 7425704362209067137}
   conditions:
   - {fileID: 6371242602797067681}
+  - {fileID: 3407730157670777804}
 --- !u!114 &6252525564635759581
 MonoBehaviour:
   m_ObjectHideFlags: 0
