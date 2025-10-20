@@ -3,6 +3,8 @@ using MyUnityPackage.Toolkit;
 using UnityEngine.Splines;
 using UnityEngine.Playables;
 using PixelCrushers.DialogueSystem;
+using MyUnityPackage.Controller;
+using System.Collections;
 
 namespace Showcase
 {
@@ -10,7 +12,6 @@ namespace Showcase
     {
 
         [SerializeField] SplineAnimate splineAnimate;
-        [SerializeField] PlayableDirector timelineEntrance;
         void Start()
         {
             DialogueManager.SetLanguage(Localization.GetLanguage(SystemLanguage.French ));
@@ -23,9 +24,23 @@ namespace Showcase
         public void StartGame()
         {
             ServiceLocator.GetService<UI_Manager>().StartUI();
-            timelineEntrance.Play();
+            
+            StartCoroutine(EndBeginSpline(splineAnimate.Duration));
+
             splineAnimate.Play();
-           
+        }
+
+        IEnumerator EndBeginSpline(float endTime)
+        {    
+            ServiceLocator.GetService<PlayerState>().enabled = false;
+            ServiceLocator.GetService<PlayerAnimation>().enabled = false;
+            splineAnimate.GetComponent<Animator>().SetFloat("InputY",1);
+            
+            yield return new WaitForSeconds(endTime);
+            ServiceLocator.GetService<PlayerState>().enabled = true;
+            ServiceLocator.GetService<PlayerAnimation>().enabled = true;
+            splineAnimate.GetComponent<Animator>().SetFloat("InputY",0);
+
         }
     }
 }
