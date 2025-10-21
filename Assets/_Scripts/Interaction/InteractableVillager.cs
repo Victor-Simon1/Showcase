@@ -36,13 +36,8 @@ namespace Showcase
         {
             MUPLogger.Info("Interaction avec un villageois ! ");
             OnTalkPNJ?.Invoke(pnj);
-            //DialogueSystemTrigger dialog;
             DialogueManager.StartConversation(dsTrigger.conversation , ServiceLocator.GetService<PlayerActions>().transform, transform);
-            //ServiceLocator.GetService<UI_Game>().ShowDialog(this);
-            //ServiceLocator.GetService<PlayerController>().enabled = false;
-            //ServiceLocator.GetService<PlayerController>().gameObject.GetComponent<PlayerAnimation>().enabled = false;
-           
-            
+
             //Si derniere dialog
             EndInteraction();
         }
