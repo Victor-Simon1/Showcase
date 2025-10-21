@@ -23,6 +23,10 @@ namespace Showcase
             MUPLogger.Info("INIT VILLAGER");
             onInteractAction += InteractVillager;
             dsTrigger = GetComponent<DialogueSystemTrigger>();
+
+            NameEffect nameEffect = GetComponentInChildren<NameEffect>();
+            if(nameEffect != null)
+                nameEffect.VillagerName = pnj.ToString();
         }
         public static bool OnTalkPnjIsNull()
         {
