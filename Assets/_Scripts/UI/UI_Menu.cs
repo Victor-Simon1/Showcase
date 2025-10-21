@@ -40,6 +40,7 @@ namespace Showcase
             ServiceLocator.GetService<PlayerState>().enabled = true;
             ServiceLocator.GetService<PlayerAnimation>().enabled = true;
             splineAnimate.GetComponent<Animator>().SetFloat("InputY",0);
+            splineAnimate.GetComponent<PlayerController>().enabled = true;
 
         }
     }
