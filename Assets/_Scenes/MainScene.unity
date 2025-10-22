@@ -33757,7 +33757,7 @@ MonoBehaviour:
   allowOnlyOneInstance: 1
   onStartTriggerWaitForSaveDataApplied: 0
   dialogueTimeMode: 0
-  debugLevel: 2
+  debugLevel: 1
 --- !u!114 &2283291104853765430
 MonoBehaviour:
   m_ObjectHideFlags: 0
