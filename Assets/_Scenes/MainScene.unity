@@ -15245,6 +15245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1527734436}
   - {fileID: 1072624933}
   m_Father: {fileID: 1415559671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15433,7 +15434,6 @@ Transform:
   - {fileID: 1642266523}
   - {fileID: 512493504}
   - {fileID: 2120069435}
-  - {fileID: 1527734436}
   m_Father: {fileID: 1066953511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1076730130 stripped
@@ -31266,6 +31266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questManager: {fileID: 1214016782}
+  splineAnimate: {fileID: 1778560185913384654}
 --- !u!1001 &2061871014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33067,7 +33068,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1072624933}
+    m_TransformParent: {fileID: 1066953511}
     m_Modifications:
     - target: {fileID: 776754469845763932, guid: 0fb0436dca39600458b4801017a8bb54, type: 3}
       propertyPath: m_Name
@@ -34114,6 +34115,10 @@ PrefabInstance:
       propertyPath: mLocalizeTarget
       value: 
       objectReference: {fileID: 1179022842}
+    - target: {fileID: 105800828031898056, guid: 551207f66879b654abcbfea2fcbe3d31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPlayButton
+      objectReference: {fileID: 0}
     - target: {fileID: 685556116121932502, guid: 551207f66879b654abcbfea2fcbe3d31, type: 3}
       propertyPath: m_Name
       value: UI_Menu

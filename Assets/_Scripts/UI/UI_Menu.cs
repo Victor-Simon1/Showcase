@@ -21,28 +21,15 @@ namespace Showcase
             UIManager.AddCanvasUI<UI_Menu>(gameObject);
         }
 
-        public void StartGame()
+        public void OnPlayButton()
         {
             ServiceLocator.GetService<UI_Manager>().StartUI();
-            
-            StartCoroutine(EndBeginSpline(splineAnimate.Duration));
-
+            //StartCoroutine(EndBeginSpline(splineAnimate.Duration));
+            ServiceLocator.GetService<GameManager>().StartGame();
             splineAnimate.Play();
         }
 
-        IEnumerator EndBeginSpline(float endTime)
-        {    
-            ServiceLocator.GetService<PlayerState>().enabled = false;
-            ServiceLocator.GetService<PlayerAnimation>().enabled = false;
-            splineAnimate.GetComponent<Animator>().SetFloat("InputY",1);
-            
-            yield return new WaitForSeconds(endTime);
-            ServiceLocator.GetService<PlayerState>().enabled = true;
-            ServiceLocator.GetService<PlayerAnimation>().enabled = true;
-            splineAnimate.GetComponent<Animator>().SetFloat("InputY",0);
-            splineAnimate.GetComponent<PlayerController>().enabled = true;
-
-        }
+       
     }
 }
 
