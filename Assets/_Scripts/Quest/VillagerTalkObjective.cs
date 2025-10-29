@@ -1,6 +1,8 @@
 using MyUnityPackage.ProgressionSystem;
 using MyUnityPackage.Toolkit;
 using System;
+using System.Linq;
+using UnityEngine;
 
 namespace Showcase
 {
@@ -15,13 +17,13 @@ namespace Showcase
         public int CurrentProgression {get;set;}
 
         public int MaxProgression {get;set;}
-        public PNJ Pnj {get;set;}
+        public EPNJ Pnj {get;set;}
 
         public event Action<int, int> OnProgress;
         public event Action OnCompleted;
 
 
-        public VillagerTalkObjective(string _title, string _description, int _countRequired,PNJ _pnj)
+        public VillagerTalkObjective(string _title, string _description, int _countRequired,EPNJ _pnj)
         {
             Title = _title;
             Description = _description;
@@ -31,17 +33,24 @@ namespace Showcase
         }
         public void Start()
         {
-            MUPLogger.Info("START TALK OBJECTIF! ");
+            //MUPLogger.Info("START TALK OBJECTIF! ");
              
            //if(InteractableVillager.OnTalkPnjIsNull())
             InteractableVillager.OnTalkPNJ += OnProgressChangePNJ;
+            OnCompleted += CompletedObjectif;
         }
         public void Stop()
         {
             InteractableVillager.OnTalkPNJ -= OnProgressChangePNJ;
+            OnCompleted -= CompletedObjectif;
         }
-        
-
+        void CompletedObjectif()
+        {
+            //MUPLogger.Info("Complete objectif talk");
+            Villager villager = GameObject.FindObjectsByType<Villager>(FindObjectsSortMode.None).Where(c => Pnj == c.GetPNJ()).ToArray()[0];
+            MUPLogger.Info("Complete objectif talk " + villager.ToString());
+            villager.SetAura();
+        }
         public bool CheckProgress()
         {
             return IsCompleted = CurrentProgression >= MaxProgression;
@@ -63,7 +72,7 @@ namespace Showcase
                 OnCompleted?.Invoke();
             }
         }
-        public void OnProgressChangePNJ(PNJ pnj)
+        public void OnProgressChangePNJ(EPNJ pnj)
         {
             if(IsCompleted || pnj != Pnj)
                 return;

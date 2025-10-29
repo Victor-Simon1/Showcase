@@ -13,6 +13,7 @@ namespace Showcase
     {
 
         public event Action OnPressInteract;
+        public event Action<int> OnSpell;
         void Awake()
         {
             ServiceLocator.AddService<PlayerActions>(gameObject);
@@ -42,11 +43,27 @@ namespace Showcase
         {
             if(!context.performed)
                 return;
-            MUPLogger.Info("Interact press");
+            //MUPLogger.Info("Interact press");
             OnPressInteract.Invoke();
         }
 
+        public void OnLeftSpell(InputAction.CallbackContext context)
+        {
+            if(context.performed)
+                OnSpell?.Invoke(-1);
+        }
 
+        public void OnRigthSpell(InputAction.CallbackContext context)
+        {
+           if(context.performed)
+                OnSpell?.Invoke(1);
+        }
+
+        public void OnDoSpell(InputAction.CallbackContext context)
+        {
+            if(context.performed)
+                OnSpell?.Invoke(0);
+        }
     }
 
 }

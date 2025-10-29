@@ -8,7 +8,7 @@ namespace Showcase
      {
           public override IQuestObjective CreateRuntimeObjective()
           {
-               return new VillagerTalkObjective("Talk to the Mayor","The Mayor greets you !",1,PNJ.Mayor);
+               return new VillagerTalkObjective(Title,Description,1,EPNJ.Mayor);
           }
      }
 }

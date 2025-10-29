@@ -25,7 +25,7 @@ namespace Showcase
         }
         public void Start()
         {
-            MUPLogger.Info("START LIGH OBJECTIF! ");
+            //MUPLogger.Info("START LIGH OBJECTIF! ");
             InteractableLight.OnLightOn += OnProgressChange;
 
             InteractableLight[] lightArray = GameObject.FindObjectsOfType<InteractableLight>();

@@ -6,27 +6,32 @@ using UnityEngine;
 
 namespace Showcase
 {
-    public enum PNJ
+    public enum EPNJ
     {
         Mayor,
         Carpenter,
         Blacksmith,
+        Wizard,
     }
     public class InteractableVillager : AInteractable
     {
-        public PNJ pnj;
+        public EPNJ pnj;
 
-        public static event Action<PNJ> OnTalkPNJ;
+        public static event Action<EPNJ> OnTalkPNJ;
         [SerializeField] DialogueSystemTrigger dsTrigger;
+        
         protected override void Init()
         {
-            MUPLogger.Info("INIT VILLAGER");
+            //MUPLogger.Info("INIT VILLAGER");
             onInteractAction += InteractVillager;
             dsTrigger = GetComponent<DialogueSystemTrigger>();
 
+            //Link name to nameEffect Class
             NameEffect nameEffect = GetComponentInChildren<NameEffect>();
             if(nameEffect != null)
                 nameEffect.VillagerName = pnj.ToString();
+
+         
         }
         public static bool OnTalkPnjIsNull()
         {

@@ -36,7 +36,7 @@ namespace Showcase
         /// </summary>
         void InteractWood()
         {
-            MUPLogger.Info("Get Wood");
+            //MUPLogger.Info("Get Wood");
             OnWoodGet?.Invoke();
             EndInteraction();
         }

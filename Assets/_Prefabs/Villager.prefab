@@ -1861,6 +1861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7075376421076385297}
   - component: {fileID: 480048778888446850}
+  - component: {fileID: 7005660492945493549}
   - component: {fileID: 7880706177179114011}
   - component: {fileID: 5320220694536956709}
   - component: {fileID: 3011411257623457303}
@@ -1915,6 +1916,21 @@ MonoBehaviour:
   - {fileID: 104430307556651329}
   pnj: 0
   dsTrigger: {fileID: 4323879380435214463}
+--- !u!114 &7005660492945493549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624213678012866036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398626dd4ce92c24ca3a872351f579a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auras:
+  - {fileID: 11400000, guid: 039b0f01e714f3047a74cc7b23e83490, type: 2}
+  - {fileID: 11400000, guid: 3e743a930a685134782bde44802fa456, type: 2}
 --- !u!114 &7880706177179114011
 MonoBehaviour:
   m_ObjectHideFlags: 0

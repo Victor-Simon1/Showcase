@@ -8,7 +8,7 @@ namespace Showcase
     {
         public override IQuestObjective CreateRuntimeObjective()
         {
-            return new VillagerTalkObjective("Talk to the Blacksmith","The Blacksmith greets you !",1,PNJ.Blacksmith);
+            return new VillagerTalkObjective("Talk to the Blacksmith","The Blacksmith greets you !",1,EPNJ.Blacksmith);
         }
     }
 }

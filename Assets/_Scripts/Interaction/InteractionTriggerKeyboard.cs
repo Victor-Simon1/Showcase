@@ -19,7 +19,7 @@ namespace Showcase
 
         void OnInteract()
         {
-            MUPLogger.Info("Press InteractionTrigger");
+            //MUPLogger.Info("Press InteractionTrigger");
             onInteract?.Invoke();
         }
     }

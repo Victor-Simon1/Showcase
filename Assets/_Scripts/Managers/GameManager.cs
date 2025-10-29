@@ -34,7 +34,7 @@ namespace Showcase
        
         public void StartGame()
         {
-            Debug.Log("StartGame");
+            //Debug.Log("StartGame");
             StartCoroutine(EndBeginSpline(splineAnimate.Duration));
         }
         IEnumerator EndBeginSpline(float timeAnimationBegin)

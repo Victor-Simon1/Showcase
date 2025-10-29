@@ -407,6 +407,33 @@ namespace MyUnityPackage.Controller
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LeftSpell"",
+                    ""type"": ""Button"",
+                    ""id"": ""2ef00e43-6566-4a44-b5f9-6527b45efc61"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RigthSpell"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d3b648b-b2f8-4584-a9a7-bc6b00fd6b4f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DoSpell"",
+                    ""type"": ""Button"",
+                    ""id"": ""5374e287-2a29-4dba-9c89-506520ffa405"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -429,6 +456,39 @@ namespace MyUnityPackage.Controller
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51359a38-f229-427b-8b48-b14bc2b978ba"",
+                    ""path"": ""<Keyboard>/#(&)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftSpell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a060a92-14f5-4be6-9857-fad5f83fc7d3"",
+                    ""path"": ""<Keyboard>/#(É)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RigthSpell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ca6d948-7cbb-4434-8c96-d6cb6afd1f7c"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DoSpell"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -564,6 +624,9 @@ namespace MyUnityPackage.Controller
             // PlayerActions
             m_PlayerActions = asset.FindActionMap("PlayerActions", throwIfNotFound: true);
             m_PlayerActions_Interact = m_PlayerActions.FindAction("Interact", throwIfNotFound: true);
+            m_PlayerActions_LeftSpell = m_PlayerActions.FindAction("LeftSpell", throwIfNotFound: true);
+            m_PlayerActions_RigthSpell = m_PlayerActions.FindAction("RigthSpell", throwIfNotFound: true);
+            m_PlayerActions_DoSpell = m_PlayerActions.FindAction("DoSpell", throwIfNotFound: true);
             // ThirdPerson
             m_ThirdPerson = asset.FindActionMap("ThirdPerson", throwIfNotFound: true);
             m_ThirdPerson_Zoom = m_ThirdPerson.FindAction("Zoom", throwIfNotFound: true);
@@ -794,6 +857,9 @@ namespace MyUnityPackage.Controller
         private readonly InputActionMap m_PlayerActions;
         private List<IPlayerActionsActions> m_PlayerActionsActionsCallbackInterfaces = new List<IPlayerActionsActions>();
         private readonly InputAction m_PlayerActions_Interact;
+        private readonly InputAction m_PlayerActions_LeftSpell;
+        private readonly InputAction m_PlayerActions_RigthSpell;
+        private readonly InputAction m_PlayerActions_DoSpell;
         /// <summary>
         /// Provides access to input actions defined in input action map "PlayerActions".
         /// </summary>
@@ -809,6 +875,18 @@ namespace MyUnityPackage.Controller
             /// Provides access to the underlying input action "PlayerActions/Interact".
             /// </summary>
             public InputAction @Interact => m_Wrapper.m_PlayerActions_Interact;
+            /// <summary>
+            /// Provides access to the underlying input action "PlayerActions/LeftSpell".
+            /// </summary>
+            public InputAction @LeftSpell => m_Wrapper.m_PlayerActions_LeftSpell;
+            /// <summary>
+            /// Provides access to the underlying input action "PlayerActions/RigthSpell".
+            /// </summary>
+            public InputAction @RigthSpell => m_Wrapper.m_PlayerActions_RigthSpell;
+            /// <summary>
+            /// Provides access to the underlying input action "PlayerActions/DoSpell".
+            /// </summary>
+            public InputAction @DoSpell => m_Wrapper.m_PlayerActions_DoSpell;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -838,6 +916,15 @@ namespace MyUnityPackage.Controller
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @LeftSpell.started += instance.OnLeftSpell;
+                @LeftSpell.performed += instance.OnLeftSpell;
+                @LeftSpell.canceled += instance.OnLeftSpell;
+                @RigthSpell.started += instance.OnRigthSpell;
+                @RigthSpell.performed += instance.OnRigthSpell;
+                @RigthSpell.canceled += instance.OnRigthSpell;
+                @DoSpell.started += instance.OnDoSpell;
+                @DoSpell.performed += instance.OnDoSpell;
+                @DoSpell.canceled += instance.OnDoSpell;
             }
 
             /// <summary>
@@ -852,6 +939,15 @@ namespace MyUnityPackage.Controller
                 @Interact.started -= instance.OnInteract;
                 @Interact.performed -= instance.OnInteract;
                 @Interact.canceled -= instance.OnInteract;
+                @LeftSpell.started -= instance.OnLeftSpell;
+                @LeftSpell.performed -= instance.OnLeftSpell;
+                @LeftSpell.canceled -= instance.OnLeftSpell;
+                @RigthSpell.started -= instance.OnRigthSpell;
+                @RigthSpell.performed -= instance.OnRigthSpell;
+                @RigthSpell.canceled -= instance.OnRigthSpell;
+                @DoSpell.started -= instance.OnDoSpell;
+                @DoSpell.performed -= instance.OnDoSpell;
+                @DoSpell.canceled -= instance.OnDoSpell;
             }
 
             /// <summary>
@@ -1199,6 +1295,27 @@ namespace MyUnityPackage.Controller
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnInteract(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "LeftSpell" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnLeftSpell(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "RigthSpell" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnRigthSpell(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "DoSpell" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnDoSpell(InputAction.CallbackContext context);
         }
         /// <summary>
         /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "ThirdPerson" which allows adding and removing callbacks.

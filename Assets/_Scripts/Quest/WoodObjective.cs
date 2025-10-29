@@ -30,7 +30,7 @@ namespace Showcase
         
         public void Start()
         {
-            MUPLogger.Info("START WOOD OBJECTIF! ");
+            //MUPLogger.Info("START WOOD OBJECTIF! ");
             InteractableWood.OnWoodGet += OnProgressChange;
         }
 

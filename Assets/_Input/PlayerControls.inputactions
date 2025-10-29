@@ -319,6 +319,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "LeftSpell",
+                    "type": "Button",
+                    "id": "2ef00e43-6566-4a44-b5f9-6527b45efc61",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RigthSpell",
+                    "type": "Button",
+                    "id": "4d3b648b-b2f8-4584-a9a7-bc6b00fd6b4f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DoSpell",
+                    "type": "Button",
+                    "id": "5374e287-2a29-4dba-9c89-506520ffa405",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -341,6 +368,39 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51359a38-f229-427b-8b48-b14bc2b978ba",
+                    "path": "<Keyboard>/#(&)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftSpell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a060a92-14f5-4be6-9857-fad5f83fc7d3",
+                    "path": "<Keyboard>/#(É)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RigthSpell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ca6d948-7cbb-4434-8c96-d6cb6afd1f7c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DoSpell",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
