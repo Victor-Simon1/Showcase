@@ -1,4 +1,5 @@
 using System.Collections;
+using MyUnityPackage.Controller;
 using MyUnityPackage.Toolkit;
 using Showcase;
 using UnityEngine;
@@ -12,6 +13,10 @@ public class Wizard : MonoBehaviour
     bool canDoSpell = true;
     void OnTriggerEnter(Collider other)
     {
+        if(!other.gameObject.GetComponent<PlayerController>())
+        {
+            return;
+        }
         ServiceLocator.GetService<PlayerActions>().OnSpell += ManageSpell;
         wizardUI = ServiceLocator.GetService<WizardUI>();
 
@@ -21,6 +26,10 @@ public class Wizard : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
+        if(!other.gameObject.GetComponent<PlayerController>())
+        {
+            return;
+        }
         ServiceLocator.GetService<PlayerActions>().OnSpell -= ManageSpell;
         wizardUI.HideUI();
     }
