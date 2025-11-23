@@ -1,11 +1,14 @@
 
 using UnityEngine;
-using UnityEngine.UI;
 
-public abstract class SpellStrategy : ScriptableObject
+namespace Showcase
 {
-    public GameObject spellPrefab;
-    public Sprite UISpell;    
-    public EElement element;
-    public abstract void InvocSpell(Transform origin);
+    public abstract class SpellStrategy : ScriptableObject
+    {
+        public GameObject spellPrefab;
+        public Sprite UISpell;    
+        public EElement element;
+        public abstract void InvocSpell(Transform origin,Vector3 direction,EElement element);
+    }
+
 }

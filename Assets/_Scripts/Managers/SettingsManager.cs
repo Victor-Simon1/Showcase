@@ -23,7 +23,7 @@ namespace Showcase
         int[] fpsArray = {30,60,120};
         void Start()
         {
-             Debug.Log("This system is in " + Application.systemLanguage);
+            //Debug.Log("This system is in " + Application.systemLanguage);
             ServiceLocator.AddService<SettingsManager>(gameObject);
             resolutionsArray = Screen.resolutions;
 
@@ -51,6 +51,8 @@ namespace Showcase
             }
             langDropdown.AddOptions(langStrings);
         }
+
+        #region SETTINGS_FUNCTION
         public void ChangeQuality(int qualityIndex)
         {
             MUPLogger.Info("" + qualityIndex);
@@ -82,7 +84,7 @@ namespace Showcase
 
         public void ChangeResolution(int resolutionIndex)
         {
-            MUPLogger.Info("Change resolution ");
+            //MUPLogger.Info("Change resolution ");
             Screen.SetResolution(resolutionsArray[resolutionIndex].width,
                                 resolutionsArray[resolutionIndex].height,
                                 Screen.fullScreen );
@@ -95,10 +97,9 @@ namespace Showcase
 
         public void ChangeFPS(int fpsIndex)
         {
-            //TO DO set les fps dans le start + le dropdown
-            
             Application.targetFrameRate = fpsArray[fpsIndex];
         }
+        #endregion
     }
 
 }

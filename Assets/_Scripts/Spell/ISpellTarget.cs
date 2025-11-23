@@ -1,6 +1,9 @@
-using UnityEngine;
 
-public interface ISpellTarget 
+namespace Showcase
 {
-    void OnBeingHit();
+    public interface ISpellTarget 
+    {
+        void OnBeingHit(EElement spellElement);
+    }
 }
+

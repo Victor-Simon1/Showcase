@@ -43,7 +43,7 @@ namespace Showcase
         {
             if(!context.performed)
                 return;
-            //MUPLogger.Info("Interact press");
+            MUPLogger.Info("Interact press");
             OnPressInteract.Invoke();
         }
 

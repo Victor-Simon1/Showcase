@@ -1,15 +1,19 @@
 using System.Collections;
 using UnityEngine;
 
-public class SelfDestruct : MonoBehaviour
+namespace Showcase
 {
-    public void Init(float duration)
+    public class SelfDestruct : MonoBehaviour
     {
-        StartCoroutine(DestroySelf(duration));
-    }
-    private IEnumerator DestroySelf(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        Destroy(gameObject);
+        public void Init(float duration)
+        {
+            StartCoroutine(DestroySelf(duration));
+        }
+        private IEnumerator DestroySelf(float duration)
+        {
+            yield return new WaitForSeconds(duration);
+            Destroy(gameObject);
+        }
     }
 }
+

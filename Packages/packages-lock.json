@@ -23,21 +23,21 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e2838980491db605590d33df5f1d72c578ef8ae6"
+      "hash": "f00e789f5793ca51456db6339d27052efeebf0db"
     },
     "com.myunitypackage.progressionsystem": {
       "version": "https://github.com/AlexandreFlanquart/UnityPackage-ProgressionSystem.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "64ada32894e362a5e7b90f34b005e4e0c8076068"
+      "hash": "da5c926e36b347b29655a97d48aa276f3ccdeb63"
     },
     "com.myunitypackage.toolkit": {
       "version": "https://github.com/AlexandreFlanquart/UnityPackage-Toolkit.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "afe8617d442a98531b6ee348d0c72ede1835489d"
+      "hash": "1e307b1fb996c98d64c485925da1ec24f44d9ca1"
     },
     "com.unity.ai.navigation": {
       "version": "2.0.7",

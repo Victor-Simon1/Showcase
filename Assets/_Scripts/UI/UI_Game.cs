@@ -17,15 +17,8 @@ namespace Showcase
         void Start()
         {
             ServiceLocator.AddService<UI_Game>(gameObject);
-            //questManager = QuestManager;
-            //UIManager.AddCanvasUI<UI_Game>(gameObject);
-            //buttonBack.onClick.AddListener(OnButtonBackClick);
         }
-        //TODO Get Active Quest
-        void UpdateQuestPanel()
-        {
 
-        }
 
         public void ShowDialog(InteractableVillager pNJTalk)
         {
@@ -36,12 +29,7 @@ namespace Showcase
         {
             dialogGO.SetActive(false);
         }
-        /*private void OnButtonBackClick()
-        {
-            Debug.Log("OnButtonBackClick");
-            UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Game>().gameObject, "FadeOut");
-            UIManager.PlayTransitionByName(UIManager.GetCanvasUI<UI_Menu>().gameObject, "FadeIn");
-        }*/
+
     }
 }
 

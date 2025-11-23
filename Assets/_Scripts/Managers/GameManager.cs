@@ -24,12 +24,13 @@ namespace Showcase
         {
             AudioManager.Initialize();
 
-            AudioUpdater[] audioUpdatersList = FindObjectsByType<AudioUpdater>(FindObjectsInactive.Include ,FindObjectsSortMode.None);
-            foreach (AudioUpdater audioUpdater in audioUpdatersList)
-            {
+           // AudioUpdater[] audioUpdatersList = FindObjectsByType<AudioUpdater>(FindObjectsInactive.Include ,FindObjectsSortMode.None);
+            //foreach (AudioUpdater audioUpdater in audioUpdatersList)
+            //{
                 //TODO
                 //audioUpdater.Initialize(); 
-            }
+            //}
+            Extensions.InitializationElement();
         }
        
         public void StartGame()
