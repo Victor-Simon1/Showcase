@@ -30,7 +30,7 @@ namespace Showcase
                 //TODO
                 //audioUpdater.Initialize(); 
             //}
-            Extensions.InitializationElement();
+            ElementExtensions.InitializationElement();
         }
        
         public void StartGame()
